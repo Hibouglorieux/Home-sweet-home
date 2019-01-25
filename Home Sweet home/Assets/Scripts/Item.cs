@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+    public enum Drag_item {fruit, matches, extinguisher, hammer, cleanser, mower, keys, none = -1};
+
+    public GameObject Player;
+
+	void Update () {	
 	}
 }
