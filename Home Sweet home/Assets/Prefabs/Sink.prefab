@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 199436060818523244}
   - component: {fileID: 198914014581914050}
   - component: {fileID: 135315427797212886}
-  - component: {fileID: 82947037305212618}
   - component: {fileID: 114408090700266936}
+  - component: {fileID: 82947037305212618}
   m_Layer: 14
   m_Name: Sink
   m_TagString: Untagged
@@ -276,7 +276,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -371,11 +371,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needed_item: 7
   timer: {fileID: 1005467281371756, guid: e731e50cbf1f40b4083e3d1c0eb0a33c, type: 2}
-  duration_of_event: 0
+  duration_of_event: 15
   timer_script: {fileID: 0}
   child_particle: {fileID: 1246374755277188}
   particles: {fileID: 198914014581914050}
-  sound: {fileID: 82947037305212618}
+  _begining: {fileID: 8300000, guid: 8584fadc330dbce4ca89c390d01f2671, type: 3}
+  _ending: {fileID: 8300000, guid: b4dbc58e2be77f64e8fd248a5a3a7f0e, type: 3}
+  _source: {fileID: 82947037305212618}
 --- !u!135 &135315427797212886
 SphereCollider:
   m_ObjectHideFlags: 1
