@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 
     public float max_timer;
-    [SerializeField] float actual_timer = 0;
+    public float actual_timer = 0;
     private Image img;
     private Transform image;
     private int count = 0;

@@ -5,10 +5,10 @@ using UnityEngine;
 public class Event_manager : MonoBehaviour {
 
     [SerializeField] int i;
-    [SerializeField] int[] tab = new int[6]; // nombre d'evenements a faire pop
+    int[] tab = new int[7]; // nombre d'evenements a faire pop
     [SerializeField] int event_rate;
     [SerializeField] int random_event;
-    [SerializeField] int Ending_timer;
+    [SerializeField] int Ending_timer = 100000;
 
     public GameObject shelf;
     public GameObject fridge;
@@ -16,35 +16,43 @@ public class Event_manager : MonoBehaviour {
     public GameObject car;
     public GameObject electricity;
     public GameObject cthulhu;
+    public GameObject sink;
 
 
     // Use this for initialization
     void Start() {
         i = 0;
-        for (int j = 0; j <= 5; j++)
+        Debug.Log(tab.Length);
+        for (int j = 0; j < 7; j++)
             tab[j] = -1;
 
     }
 
     void Launch_event(GameObject id)
     {
+        if (id.GetComponent<Interractable_item>().timer_script != null)
+        {
+            Launch_event(Chose_event(true));
+            return ;
+        }
+        id.GetComponent<Interractable_item>().StartEvent();
         // lancer la fonction du gameobject qui lance l'animation ?
-        Debug.Log("Event !!");
+        Debug.Log("Event !!" + id.ToString());
         i = 0;
     }
 
     GameObject Chose_event(bool mod)
     {
-        int event_number = Random.Range(0, 6);
+        int event_number = Random.Range(0, 7);
         int count = 0;
-        for (int k = 0; k <= 5; k++)
+        for (int k = 0; k <= 6; k++)
         {
             if (mod == true)
                 break;
             if (event_number == tab[k])
                 return (Chose_event(true));
         }
-        while (count < 5  && tab[count] != -1)
+        while (count < 6  && tab[count] != -1)
             count++;
         tab[count] = event_number;
         switch (event_number)
@@ -61,6 +69,8 @@ public class Event_manager : MonoBehaviour {
                 return (electricity);
             case 5:
                 return (cthulhu);
+            case 6:
+                return (sink);
             default:
                 {
                     Debug.Log("default in Chose_event() from Event_manager");

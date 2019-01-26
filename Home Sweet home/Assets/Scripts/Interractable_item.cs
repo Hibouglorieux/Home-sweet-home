@@ -7,26 +7,33 @@ public class Interractable_item : Item {
     public Drag_item needed_item;
     [SerializeField] float _eventFixeTime, _loseTime;
     public GameObject timer;
-    [SerializeField] float duration_of_event;
-    private Timer real_timer = null;
+    [SerializeField] protected float duration_of_event;
+    public Timer timer_script = null;
 
     public bool Launch_event(Drag_item item_held)
     {
         if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
         {
             Debug.Log("used"); //ok
-            if (real_timer)
-                Destroy(real_timer);
-            real_timer = null;
-
+            if (timer_script)
+                Destroy(timer_script);
+            timer_script = null;
+            End_event();
             return true;
         }
         return false;
     }
 
-    public void StartEvent()
+    public virtual void End_event()
     {
-        real_timer = Instantiate(timer, new Vector3 (transform.position.x, 4,transform.position.z), new Quaternion()).GetComponent<Timer>();
-        real_timer.max_timer = duration_of_event;
+    }
+    public virtual void StartEvent()
+    {
+        timer_script = Instantiate(timer, new Vector3 (transform.position.x, 4,transform.position.z), new Quaternion()).GetComponent<Timer>();
+        timer_script.max_timer = duration_of_event;
+    }
+
+    public virtual void Animation()
+    {
     }
 }
