@@ -77,4 +77,11 @@ public class PlayerInteraction : MonoBehaviour
         _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
         _draggedItem = null;
     }
+
+    public void Detroy_held_obj()
+    {
+        _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
+        Destroy(_draggedItem.gameObject);
+        _draggedItem = null;
+    }
 }

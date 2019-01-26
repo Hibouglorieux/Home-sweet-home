@@ -5,6 +5,14 @@ using UnityEngine;
 public class Trash : Interractable_item {
 
 
-
-
+    public override bool Launch_event(Drag_item item_held)
+    {
+        if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
+        {
+            Debug.Log("used"); //ok
+            PlayerInteraction.inst.Detroy_held_obj();
+            return true;
+        }
+        return false;
+    }
 }
