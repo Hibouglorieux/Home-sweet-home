@@ -3,6 +3,7 @@
 public class Car : Interractable_item {
 
     Animator _anim;
+    bool playing;
 
     private void Awake()
     {
@@ -31,11 +32,15 @@ public class Car : Interractable_item {
 
     public override void StartEvent()
     {
+        if (playing) return;
+
+        playing = true;
         _anim.SetTrigger("StartAlarm");
     }
 
     public override void End_event()
     {
+        playing = false;
         _anim.SetTrigger("CutAlarm");
     }
 }

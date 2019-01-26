@@ -8,8 +8,7 @@ public class PlaySound : MonoBehaviour {
 
     public void Play()
     {
-        if (_source.isPlaying)
-            _source.time = 0;
-        _source.Play();
+        if (!_source.isPlaying)
+            _source.Play();
     }
 }
