@@ -43,6 +43,7 @@ public class Item_drag : Item {
     public virtual void Activate()
     {
         active = true;
+        PlayerInteraction.inst.TryInteract();
     }
     public virtual void Desactivate()
     {

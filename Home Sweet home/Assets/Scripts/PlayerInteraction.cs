@@ -30,6 +30,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (_draggedItem != null)
                 _draggedItem.Activate();
+            else TryInteract();
         }
         else if (Input.GetKeyUp("joystick button 0"))
         {

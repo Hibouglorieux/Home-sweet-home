@@ -12,6 +12,7 @@ public class Fire : MonoBehaviour {
 
     void Start()
     {
+        GameManager.inst.fireCount++;
         _child = transform.GetChild(0);
         _startScale = _child.localScale.x;
         _child.localScale = Vector3.one * _startScale * .1f;
@@ -30,6 +31,9 @@ public class Fire : MonoBehaviour {
     {
         _time -= _healTime * Time.deltaTime * 3;
         if (_time <= 0)
+        {
+            GameManager.inst.fireCount--;
             Destroy(gameObject);
+        }
     }
 }

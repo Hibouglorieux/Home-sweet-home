@@ -7,28 +7,26 @@ public class Matches : MonoBehaviour {
     [SerializeField] GameObject _fire;
     Rigidbody _rb;
 
+    float _lifeTime = 4f;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        StartCoroutine(WaitToDestroy(_lifeTime));
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        Instantiate(_fire).transform.position = collision.contacts[0].point;
+        if (GameManager.inst.canAddFire)
+            Instantiate(_fire).transform.position = collision.contacts[0].point;
 
-        if (_rb.velocity.sqrMagnitude <= .1f)
+        if (_rb.velocity.sqrMagnitude <= .2f)
             Destroy(gameObject);
     }
 
-    /*public override void Activate()
+    IEnumerator WaitToDestroy(float time)
     {
-        base.Activate();
-        _particles.Play();
-    }
-    public override void Desactivate()
-    {
-        base.Desactivate();
-        GetComponent<Rigidbody>().isKinematic = false;
-        PlayerInteraction.inst.Drop();
-    }*/
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
+    }   
 }

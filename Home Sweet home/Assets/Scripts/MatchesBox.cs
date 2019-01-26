@@ -9,6 +9,9 @@ public class MatchesBox : Item_drag {
     public override void Activate()
     {
         if (!PlayerInteraction.inst.TryInteract())
-            Instantiate(_matches).transform.position = _transform.position;
+        {
+            if (GameManager.inst.canAddFire)
+                Instantiate(_matches).transform.position = _transform.position;
+        }
     }
 }

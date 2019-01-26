@@ -38,7 +38,8 @@ public class Extinguisher : Item_drag {
 
     public override void Activate()
     {
-        base.Activate();
+        //base.Activate();
+        active = true;
         _particles.Play();
     }
     public override void Desactivate()
