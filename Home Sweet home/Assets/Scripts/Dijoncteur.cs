@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dijoncteur : MonoBehaviour {
+public class Dijoncteur : Interractable_item {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public AudioSource sound;
+
+    private void Awake()
+    {
+        sound.Stop();
+    }
+
+        
 }

@@ -5665,6 +5665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9da0dce25866b4594680e98f0876fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needed_item: 0
+  timer: {fileID: 0}
+  duration_of_event: 0
+  timer_script: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &789922327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,6 +5678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 789922328}
+  - component: {fileID: 789922329}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -5694,6 +5700,18 @@ Transform:
   m_Father: {fileID: 1052067070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &789922329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 789922327}
+  m_Material: {fileID: 13400000, guid: bd99bce1465120d449f2f696768a2803, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.52, z: 3.4}
+  m_Center: {x: 0, y: 0, z: -1.7}
 --- !u!1 &826977031
 GameObject:
   m_ObjectHideFlags: 0
@@ -6181,7 +6199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077126420}
   - component: {fileID: 1077126421}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6450,7 +6468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: c4be123a559670c4588b626d5da9339a, type: 3}
       propertyPath: m_Name
-      value: marteau (1)
+      value: Spanner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4be123a559670c4588b626d5da9339a, type: 3}
@@ -6508,6 +6526,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: c4be123a559670c4588b626d5da9339a,
     type: 3}
   m_PrefabInternal: {fileID: 1185511902}
+--- !u!54 &1180391844
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180391841}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1180391845
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180391841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 0.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1185511902
 Prefab:
   m_ObjectHideFlags: 0
@@ -6570,6 +6616,10 @@ Prefab:
     - target: {fileID: 400002, guid: c4be123a559670c4588b626d5da9339a, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c4be123a559670c4588b626d5da9339a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4be123a559670c4588b626d5da9339a, type: 3}
@@ -11592,9 +11642,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1052067070}
-  - component: {fileID: 1428155933}
   - component: {fileID: 1428155932}
-  m_Layer: 0
+  - component: {fileID: 1428155934}
+  - component: {fileID: 1428155933}
+  m_Layer: 14
   m_Name: etagere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11608,7 +11659,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1428155931}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cc2876f06c940ba44b51919af4913a0b, type: 2}
   m_CullingMode: 0
@@ -11619,21 +11670,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &1428155933
-Animation:
+--- !u!114 &1428155933
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1428155931}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: 12663f2ff97e3d94ba09643823dd23e8, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d47d4bb365e645a1b784fdb50410b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needed_item: 3
+  timer: {fileID: 1005467281371756, guid: e731e50cbf1f40b4083e3d1c0eb0a33c, type: 2}
+  duration_of_event: 20
+  timer_script: {fileID: 0}
+  child: {fileID: 789922328}
+--- !u!136 &1428155934
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428155931}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 1, y: 1, z: 0}
 --- !u!1 &1514570345
 GameObject:
   m_ObjectHideFlags: 0
@@ -16736,6 +16801,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ed383c45d4b7f49a2a2c461e0c7355, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1693413406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693413407}
+  - component: {fileID: 1693413408}
+  m_Layer: 13
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693413407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693413406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1180391843}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1693413408
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693413406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1712155046
 Prefab:
   m_ObjectHideFlags: 0
@@ -21837,7 +21944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572d434ff1abb874e9e26153c9378b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 5
+  id: 7
   active: 0
 --- !u!1 &2006023129
 GameObject:
@@ -22127,7 +22234,7 @@ MonoBehaviour:
   event_rate: 750
   random_event: 300
   Ending_timer: 10000
-  shelf: {fileID: 0}
+  shelf: {fileID: 1428155931}
   fridge: {fileID: 1542154436}
   gaz: {fileID: 0}
   car: {fileID: 0}
