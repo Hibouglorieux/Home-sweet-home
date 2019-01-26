@@ -10,13 +10,13 @@ public class Interractable_item : Item {
     [SerializeField] protected float duration_of_event;
     public Timer timer_script = null;
 
-    public bool Launch_event(Drag_item item_held)
+    public virtual bool Launch_event(Drag_item item_held)
     {
         if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
         {
             Debug.Log("used"); //ok
             if (timer_script)
-                Destroy(timer_script);
+                Destroy(timer_script.gameObject);
             timer_script = null;
             End_event();
             return true;
