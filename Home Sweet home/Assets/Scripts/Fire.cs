@@ -10,6 +10,8 @@ public class Fire : MonoBehaviour {
     float _startScale = .1f;
     Transform _child;
 
+    [HideInInspector] public GazCooker _creator;
+
     void Start()
     {
         GameManager.inst.fireCount++;
@@ -33,6 +35,8 @@ public class Fire : MonoBehaviour {
         if (_time <= 0)
         {
             GameManager.inst.fireCount--;
+            if (_creator != null)
+                _creator.FireDie();
             Destroy(gameObject);
         }
     }
