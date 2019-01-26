@@ -22,6 +22,9 @@ public class PlayerInteraction : MonoBehaviour
         }
         else if (Input.GetKeyDown("joystick button 1") && _draggedItem != null)
             Drop();
+
+        if (_draggedItem != null)
+            _draggedItem.SetPositionRotation(_grabbedPosition.position, _grabbedPosition.rotation);
     }
 
     bool TryGrab()
@@ -49,7 +52,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void Drop()
     {
-        _draggedItem.Drop();
+        _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
         _draggedItem = null;
     }
 }
