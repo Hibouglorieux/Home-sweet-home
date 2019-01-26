@@ -5,7 +5,6 @@ using UnityEngine;
 public class Interractable_item : Item {
 
     public Drag_item needed_item;
-    [SerializeField] float _eventFixeTime, _loseTime;
     public GameObject timer;
     [SerializeField] protected float duration_of_event;
     public Timer timer_script = null;

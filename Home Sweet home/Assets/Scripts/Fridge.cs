@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class Fridge : Interractable_item {
 
-	// Use this for initialization
+    [SerializeField] GameObject door;
+
 	void Start () {
-		
+        needed_item = Drag_item.none;
+        duration_of_event = 20;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public override void StartEvent()
+    {
+        timer_script = Instantiate(timer, new Vector3(transform.position.x, 4, transform.position.z), new Quaternion()).GetComponent<Timer>();
+        timer_script.max_timer = duration_of_event;
+        Launch_animation();
+    }
+
+    void Launch_animation()
+    {
+        ; // faire la porte
+    }
 }
