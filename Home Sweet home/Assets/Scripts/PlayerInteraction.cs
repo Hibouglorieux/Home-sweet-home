@@ -4,27 +4,38 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    public static PlayerInteraction inst;
+
     [SerializeField] Transform _grabbedPosition;
     [SerializeField] Transform _grabCenter;
 
     [SerializeField] Item_drag _draggedItem;
     [SerializeField] LayerMask _grabLayer, _interactLayer;
 
+    private void Awake()
+    {
+        inst = this;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("joystick button 0"))
         {
-            bool grabNow = false;
+            /*bool grabNow = false;
             if (_draggedItem == null)
                 grabNow = TryGrab();
-            else _draggedItem.Activate();
+            else _draggedItem.Activate();*/
             //if (!grabNow)
                 //TryInteract();
+
+            if (_draggedItem != null)
+                _draggedItem.Activate();
         }
         else if (Input.GetKeyUp("joystick button 0"))
         {
             if (_draggedItem != null)
                 _draggedItem.Desactivate();
+            else TryGrab();
         }
         else if (Input.GetKeyDown("joystick button 1") && _draggedItem != null)
             Drop();
@@ -44,19 +55,17 @@ public class PlayerInteraction : MonoBehaviour
         return true;
     }
 
-    bool TryInteract()
+    public bool TryInteract()
     {
         Collider[] cols = Physics.OverlapSphere(_grabCenter.position, .8f, _interactLayer);
         if (cols.Length <= 0) return false;
 
         Interractable_item iteract = cols[0].GetComponent<Interractable_item>();
 
-        iteract.Launch_event(_draggedItem != null ? _draggedItem.id : Item.Drag_item.none);
-
-        return true;
+        return iteract.Launch_event(_draggedItem != null ? _draggedItem.id : Item.Drag_item.none);
     }
 
-    void Drop()
+    public void Drop()
     {
         _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
         _draggedItem = null;

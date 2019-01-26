@@ -10,7 +10,7 @@ public class Interractable_item : Item {
     [SerializeField] float duration_of_event;
     private Timer real_timer = null;
 
-    public void Launch_event(Drag_item item_held)
+    public bool Launch_event(Drag_item item_held)
     {
         if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
         {
@@ -18,7 +18,10 @@ public class Interractable_item : Item {
             if (real_timer)
                 Destroy(real_timer);
             real_timer = null;
+
+            return true;
         }
+        return false;
     }
 
     public void StartEvent()

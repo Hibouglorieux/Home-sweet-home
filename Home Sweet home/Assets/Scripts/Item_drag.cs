@@ -7,9 +7,9 @@ public class Item_drag : Item {
     public Drag_item id;
     public bool active;
 
-    Transform _transform;
-    Rigidbody _rb;
-    Collider _collider;
+    protected Transform _transform;
+    protected Rigidbody _rb;
+    protected Collider _collider;
 
     void Start()
     {
