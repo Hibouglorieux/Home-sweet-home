@@ -81,6 +81,8 @@ public class Event_manager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        if (GameManager.inst.states != GameManager.GameStates.playing)
+            return;
         if (i == 0)
             i = Random.Range(0, random_event); // a revoir ?
         i++;

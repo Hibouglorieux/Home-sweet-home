@@ -10,11 +10,6 @@ public class Sink : Interractable_item {
     [SerializeField] AudioClip _begining, _ending;
     [SerializeField] AudioSource _source;
 
-
-    private void Start()
-    {
-        StartEvent();
-    }
     public override bool Launch_event(Drag_item item_held)
     {
         if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
