@@ -32,7 +32,6 @@ public class Sink : Interractable_item {
 		if (ini == false && timer_script && timer_script.actual_timer >= duration_of_event / 2)
         {
             child_particle.SetActive(true);
-            Debug.Log("set active activated");
             ini = true;
         }
 	}
