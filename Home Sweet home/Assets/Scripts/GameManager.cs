@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager inst;
 
+    public enum GameStates  { starting, playing, paused, end }
+    public GameStates states = GameStates.starting;
+
     public uint fireCount;
     [SerializeField] uint maxFireCount = 10;
     public bool canAddFire { get {  return fireCount < maxFireCount; } }
