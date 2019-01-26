@@ -24,7 +24,6 @@ public class Extinguisher : Item_drag {
                 }
                 else if (hits[i].collider.CompareTag("Wall") && (hits[i].point - _raypoint.position).sqrMagnitude < _minDst)
                 {
-                    print("in");
                     wall = true;
                     _particles.Stop();
                 }
@@ -33,7 +32,6 @@ public class Extinguisher : Item_drag {
             if (!wall && _particles.isStopped)
             {
                 _particles.Play();
-                print("in_2");
             }
         }
     }
