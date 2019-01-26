@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 303fc41e740cbb84aa8914f221457d89
+timeCreated: 1548467727
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: boitier_Disjoncteur
+    100002: //RootNode
+    100004: Disjoncteur_Boitier1_Boitier_1_Plombs
+    100006: Disjoncteur_Boitier_1_Plombs_plomb1
+    100008: Disjoncteur_Boitier_1_Plombs_plomb2
+    100010: Disjoncteur_Boitier_1_Plombs_plomb3
+    100012: Disjoncteur_Boitier_1_Plombs_plomb4
+    100014: Disjoncteur_Boitier_1_Plombs_plomb5
+    100016: Disjoncteur_Cable1
+    100018: Disjoncteur_Cable2
+    100020: Disjoncteur_Plombs_Boitier_2_Boitier2
+    100022: Disjoncteur_Plombs_Boitier_2_plomb6
+    100024: Disjoncteur_Plombs_Boitier_2_plomb7
+    100026: Disjoncteur_Plombs_Boitier_2_plomb8
+    100028: Disjoncteur_Plombs_Boitier_2_plomb9
+    100030: Disjoncteur_Plombs_plomb10_Boitier_2
+    400000: boitier_Disjoncteur
+    400002: //RootNode
+    400004: Disjoncteur_Boitier1_Boitier_1_Plombs
+    400006: Disjoncteur_Boitier_1_Plombs_plomb1
+    400008: Disjoncteur_Boitier_1_Plombs_plomb2
+    400010: Disjoncteur_Boitier_1_Plombs_plomb3
+    400012: Disjoncteur_Boitier_1_Plombs_plomb4
+    400014: Disjoncteur_Boitier_1_Plombs_plomb5
+    400016: Disjoncteur_Cable1
+    400018: Disjoncteur_Cable2
+    400020: Disjoncteur_Plombs_Boitier_2_Boitier2
+    400022: Disjoncteur_Plombs_Boitier_2_plomb6
+    400024: Disjoncteur_Plombs_Boitier_2_plomb7
+    400026: Disjoncteur_Plombs_Boitier_2_plomb8
+    400028: Disjoncteur_Plombs_Boitier_2_plomb9
+    400030: Disjoncteur_Plombs_plomb10_Boitier_2
+    2100000: boitier_DisjoncteurMat
+    2100002: Disjoncteur_Boitier1_Boitier_1_PlombsMat
+    2100004: Disjoncteur_Boitier_1_Plombs_plomb1Mat
+    2100006: Disjoncteur_Boitier_1_Plombs_plomb2Mat
+    2100008: Disjoncteur_Boitier_1_Plombs_plomb3Mat
+    2100010: Disjoncteur_Boitier_1_Plombs_plomb4Mat
+    2100012: Disjoncteur_Boitier_1_Plombs_plomb5Mat
+    2100014: Disjoncteur_Cable1Mat
+    2100016: Disjoncteur_Cable2Mat
+    2100018: Disjoncteur_Plombs_Boitier_2_Boitier2Mat
+    2100020: Disjoncteur_Plombs_Boitier_2_plomb6Mat
+    2100022: Disjoncteur_Plombs_Boitier_2_plomb7Mat
+    2100024: Disjoncteur_Plombs_Boitier_2_plomb8Mat
+    2100026: Disjoncteur_Plombs_Boitier_2_plomb9Mat
+    2100028: Disjoncteur_Plombs_plomb10_Boitier_2Mat
+    2300000: boitier_Disjoncteur
+    2300002: Disjoncteur_Boitier1_Boitier_1_Plombs
+    2300004: Disjoncteur_Boitier_1_Plombs_plomb1
+    2300006: Disjoncteur_Boitier_1_Plombs_plomb2
+    2300008: Disjoncteur_Boitier_1_Plombs_plomb3
+    2300010: Disjoncteur_Boitier_1_Plombs_plomb4
+    2300012: Disjoncteur_Boitier_1_Plombs_plomb5
+    2300014: Disjoncteur_Cable1
+    2300016: Disjoncteur_Cable2
+    2300018: Disjoncteur_Plombs_Boitier_2_Boitier2
+    2300020: Disjoncteur_Plombs_Boitier_2_plomb6
+    2300022: Disjoncteur_Plombs_Boitier_2_plomb7
+    2300024: Disjoncteur_Plombs_Boitier_2_plomb8
+    2300026: Disjoncteur_Plombs_Boitier_2_plomb9
+    2300028: Disjoncteur_Plombs_plomb10_Boitier_2
+    3300000: boitier_Disjoncteur
+    3300002: Disjoncteur_Boitier1_Boitier_1_Plombs
+    3300004: Disjoncteur_Boitier_1_Plombs_plomb1
+    3300006: Disjoncteur_Boitier_1_Plombs_plomb2
+    3300008: Disjoncteur_Boitier_1_Plombs_plomb3
+    3300010: Disjoncteur_Boitier_1_Plombs_plomb4
+    3300012: Disjoncteur_Boitier_1_Plombs_plomb5
+    3300014: Disjoncteur_Cable1
+    3300016: Disjoncteur_Cable2
+    3300018: Disjoncteur_Plombs_Boitier_2_Boitier2
+    3300020: Disjoncteur_Plombs_Boitier_2_plomb6
+    3300022: Disjoncteur_Plombs_Boitier_2_plomb7
+    3300024: Disjoncteur_Plombs_Boitier_2_plomb8
+    3300026: Disjoncteur_Plombs_Boitier_2_plomb9
+    3300028: Disjoncteur_Plombs_plomb10_Boitier_2
+    4300000: boitier_Disjoncteur
+    4300002: Disjoncteur_Boitier1_Boitier_1_Plombs
+    4300004: Disjoncteur_Boitier_1_Plombs_plomb1
+    4300006: Disjoncteur_Boitier_1_Plombs_plomb2
+    4300008: Disjoncteur_Boitier_1_Plombs_plomb3
+    4300010: Disjoncteur_Boitier_1_Plombs_plomb4
+    4300012: Disjoncteur_Boitier_1_Plombs_plomb5
+    4300014: Disjoncteur_Cable1
+    4300016: Disjoncteur_Cable2
+    4300018: Disjoncteur_Plombs_Boitier_2_Boitier2
+    4300020: Disjoncteur_Plombs_Boitier_2_plomb6
+    4300022: Disjoncteur_Plombs_Boitier_2_plomb7
+    4300024: Disjoncteur_Plombs_Boitier_2_plomb8
+    4300026: Disjoncteur_Plombs_Boitier_2_plomb9
+    4300028: Disjoncteur_Plombs_plomb10_Boitier_2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
