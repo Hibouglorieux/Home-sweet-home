@@ -13,7 +13,6 @@ public class Altar : Interractable_item
     private void Start()
     {
         _source = GetComponent<AudioSource>();
-        StartEvent();
     }
 
     public override bool Launch_event(Drag_item item_held)
