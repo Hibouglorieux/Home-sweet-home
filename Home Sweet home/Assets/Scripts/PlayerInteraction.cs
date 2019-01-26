@@ -19,6 +19,9 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.inst.states != GameManager.GameStates.playing)
+            return;
+
         if (Input.GetKeyDown("joystick button 0"))
         {
             /*bool grabNow = false;
@@ -62,8 +65,11 @@ public class PlayerInteraction : MonoBehaviour
         if (cols.Length <= 0) return false;
 
         Interractable_item iteract = cols[0].GetComponent<Interractable_item>();
+        bool validation = iteract.Launch_event(_draggedItem != null ? _draggedItem.id : Item.Drag_item.none);
+        if (validation)
+            ;//iteract.DoAction
 
-        return iteract.Launch_event(_draggedItem != null ? _draggedItem.id : Item.Drag_item.none);
+        return validation;
     }
 
     public void Drop()

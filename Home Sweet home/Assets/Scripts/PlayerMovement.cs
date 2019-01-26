@@ -18,12 +18,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.inst.states != GameManager.GameStates.playing)
+            return;
+
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
     }
 
     void FixedUpdate()
     {
+        if (GameManager.inst.states != GameManager.GameStates.playing)
+            return;
+
         if (Mathf.Abs(_horizontal) > 0 || Mathf.Abs(_vertical) > 0)
         {
             //Rotation
