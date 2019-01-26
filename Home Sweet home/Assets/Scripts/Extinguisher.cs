@@ -19,7 +19,9 @@ public class Extinguisher : Item_drag {
             for (int i = 0; i < hits.Length; i++)
             {
                 if (hits[i].collider.CompareTag("Flame"))
-                    Destroy(hits[i].collider.gameObject, .1f);
+                {
+                    hits[i].collider.GetComponent<Fire>().Attack();
+                }
                 else if (hits[i].collider.CompareTag("Wall") && (hits[i].point - _raypoint.position).sqrMagnitude < _minDst)
                 {
                     print("in");
