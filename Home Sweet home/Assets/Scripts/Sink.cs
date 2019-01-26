@@ -11,7 +11,6 @@ public class Sink : Interractable_item {
 
     private void Awake()
     {
-        duration_of_event = 15f;
         particles.Stop();
         needed_item = Drag_item.mower;
     }
@@ -22,7 +21,7 @@ public class Sink : Interractable_item {
         {
             Debug.Log("used"); //ok
             // ajouter son
-            if (timer_script && (timer_script.actual_timer -= timer_script.max_timer / 15) < 0)
+            if (timer_script && (timer_script.actual_timer -= timer_script.max_timer / duration_of_event) < 0)
             {
                 sound.Stop();
                 Destroy(timer_script.gameObject);

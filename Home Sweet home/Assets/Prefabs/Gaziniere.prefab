@@ -696,7 +696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needed_item: 2
   timer: {fileID: 1005467281371756, guid: e731e50cbf1f40b4083e3d1c0eb0a33c, type: 2}
-  duration_of_event: 15
+  duration_of_event: 25
   timer_script: {fileID: 0}
   _fire: {fileID: 114988509173089924, guid: 5c8ed2550ee5a7a4e92af022f0974040, type: 2}
   _spawnPoint:
