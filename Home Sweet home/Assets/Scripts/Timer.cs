@@ -23,5 +23,7 @@ public class Timer : MonoBehaviour {
             img.color = new Color(percent * 2, 0.5f, img.color.b);
         else
             img.color = new Color(1, 1 - percent, img.color.b);
+        if (actual_timer > max_timer)
+            ; // gameover
     }
 }
