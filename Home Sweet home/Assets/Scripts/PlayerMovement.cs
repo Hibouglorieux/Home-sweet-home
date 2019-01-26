@@ -7,11 +7,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _moveSpeed = 24, _maxMoveSpeed = 8, _rotationSpeed = 100;
     float _horizontal = 0, _vertical = 0;
 
-    [SerializeField] Transform _grabCenter;
-
-    [SerializeField] Item _draggedItem;
-    [SerializeField] LayerMask _grabLayer, _interactLayer;
-
     Rigidbody _rb;
 
     public Vector3 vc;
@@ -25,10 +20,6 @@ public class PlayerMovement : MonoBehaviour
     {
         _horizontal = Input.GetAxis("Horizontal");
         _vertical = Input.GetAxis("Vertical");
-
-        if (_draggedItem == null)
-            TryGrab();
-        else TryInteract();
     }
 
     void FixedUpdate()
@@ -44,24 +35,5 @@ public class PlayerMovement : MonoBehaviour
             //_rb.velocity = Vector3.zero;
             _rb.AddForce(transform.forward * _moveSpeed, ForceMode.Force);
         }
-    }
-
-    bool TryGrab()
-    {
-        Collider[] cols = Physics.OverlapSphere(_grabCenter.position, .8f, _grabLayer);
-        if (cols.Length <= 0) return false;
-
-        _draggedItem = cols[0].GetComponent<Item>();
-
-        return true;
-    }
-
-    bool TryInteract()
-    {
-        Collider[] cols = Physics.OverlapSphere(_grabCenter.position, .8f, _interactLayer);
-        if (cols.Length <= 0) return false;
-
-
-        return true;
     }
 }

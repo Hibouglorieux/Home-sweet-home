@@ -6,8 +6,6 @@ public class Item : MonoBehaviour {
 
     public enum Drag_item {fruit, matches, extinguisher, hammer, cleanser, mower, keys, none = -1};
 
-    public GameObject Player;
-
 	void Update () {	
 	}
 }
