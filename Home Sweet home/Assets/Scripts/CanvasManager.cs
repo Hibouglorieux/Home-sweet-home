@@ -39,7 +39,7 @@ public class CanvasManager : MonoBehaviour {
 
     void Update()
     {
-        if (Input.anyKeyDown && GameManager.inst.states != GameManager.GameStates.end)
+        if (Input.anyKeyDown && GameManager.inst.states == GameManager.GameStates.end)
         {
             Menu();
         }
