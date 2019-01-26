@@ -35,6 +35,8 @@ public class Fire : MonoBehaviour {
         if (_time <= 0)
         {
             GameManager.inst.fireCount--;
+            if (GameManager.inst.fireCount < 0)
+                GameManager.inst.fireCount = 0;
             if (_creator != null)
                 _creator.FireDie();
             Destroy(gameObject);

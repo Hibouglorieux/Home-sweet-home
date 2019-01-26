@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 64041893099564390}
   - component: {fileID: 114713446839402636}
   - component: {fileID: 82396805405122862}
+  - component: {fileID: 65566739895690104}
   m_Layer: 14
   m_Name: Altar 1
   m_TagString: Altar
@@ -1045,6 +1046,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 267c9745611e01643b615a28432d42db, type: 3}
+--- !u!65 &65566739895690104
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1150009078466498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 2, z: 4}
+  m_Center: {x: 0.56, y: 1, z: 0}
 --- !u!82 &82396805405122862
 AudioSource:
   m_ObjectHideFlags: 1
