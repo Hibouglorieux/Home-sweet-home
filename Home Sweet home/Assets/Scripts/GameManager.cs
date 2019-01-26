@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public GameStates states = GameStates.starting;
     public GameObject cnvs;
 
-    public uint fireCount;
+    public int fireCount;
     [SerializeField] uint maxFireCount = 10;
     public bool canAddFire { get {  return fireCount < maxFireCount; } }
 
