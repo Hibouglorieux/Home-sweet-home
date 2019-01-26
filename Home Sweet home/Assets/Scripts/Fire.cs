@@ -29,7 +29,7 @@ public class Fire : MonoBehaviour {
 
     public void Attack()
     {
-        _time -= _healTime * Time.deltaTime * 3;
+        _time -= _healTime * Time.deltaTime * 2.5f;
         if (_time <= 0)
         {
             GameManager.inst.fireCount--;

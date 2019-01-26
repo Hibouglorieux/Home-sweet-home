@@ -5,7 +5,7 @@ using UnityEngine;
 public class Extinguisher : Item_drag {
 
     [SerializeField] ParticleSystem _particles;
-    [SerializeField] Transform _raypoint;
+    [SerializeField] Transform[] _raypoints;
     [SerializeField] float _distance;
     [SerializeField] LayerMask _layer;
     [SerializeField] float _minDst = .1f;
@@ -15,14 +15,28 @@ public class Extinguisher : Item_drag {
         if (active)
         {
             bool wall = false;
-            RaycastHit[] hits = Physics.RaycastAll(_raypoint.position, _raypoint.forward, _distance, _layer);
+            RaycastHit[] hits = Physics.RaycastAll(_raypoints[0].position, _raypoints[0].forward, _distance, _layer);
             for (int i = 0; i < hits.Length; i++)
             {
                 if (hits[i].collider.CompareTag("Flame"))
                 {
                     hits[i].collider.GetComponent<Fire>().Attack();
                 }
-                else if (hits[i].collider.CompareTag("Wall") && (hits[i].point - _raypoint.position).sqrMagnitude < _minDst)
+                else if (hits[i].collider.CompareTag("Wall") && (hits[i].point - _raypoints[0].position).sqrMagnitude < _minDst)
+                {
+                    wall = true;
+                    _particles.Stop();
+                }
+            }
+
+            hits = Physics.RaycastAll(_raypoints[1].position, _raypoints[1].forward, _distance, _layer);
+            for (int i = 0; i < hits.Length; i++)
+            {
+                if (hits[i].collider.CompareTag("Flame"))
+                {
+                    hits[i].collider.GetComponent<Fire>().Attack();
+                }
+                else if (hits[i].collider.CompareTag("Wall") && (hits[i].point - _raypoints[1].position).sqrMagnitude < _minDst)
                 {
                     wall = true;
                     _particles.Stop();
