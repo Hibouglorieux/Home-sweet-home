@@ -10,6 +10,12 @@ ModelImporter:
     100008: Gaziniere_Taque2
     100010: Gaziniere_Taque3
     100012: Gaziniere_Taque4
+    100014: Props_0004:Gaziniere_Props_0004:Gaziniere
+    100016: Props_0004:Gaziniere_Props_0004:Handle
+    100018: Props_0004:Gaziniere_Props_0004:Taque1
+    100020: Props_0004:Gaziniere_Props_0004:Taque2
+    100022: Props_0004:Gaziniere_Props_0004:Taque3
+    100024: Props_0004:Gaziniere_Props_0004:Taque4
     400000: //RootNode
     400002: Gaziniere_Gaziniere
     400004: Gaziniere_Handle
@@ -17,30 +23,60 @@ ModelImporter:
     400008: Gaziniere_Taque2
     400010: Gaziniere_Taque3
     400012: Gaziniere_Taque4
+    400014: Props_0004:Gaziniere_Props_0004:Gaziniere
+    400016: Props_0004:Gaziniere_Props_0004:Handle
+    400018: Props_0004:Gaziniere_Props_0004:Taque1
+    400020: Props_0004:Gaziniere_Props_0004:Taque2
+    400022: Props_0004:Gaziniere_Props_0004:Taque3
+    400024: Props_0004:Gaziniere_Props_0004:Taque4
     2100000: Gaziniere_GaziniereMat
     2100002: Gaziniere_HandleMat
     2100004: Gaziniere_Taque1Mat
     2100006: Gaziniere_Taque2Mat
     2100008: Gaziniere_Taque3Mat
     2100010: Gaziniere_Taque4Mat
+    2100012: Props_0004_Gaziniere_Props_0004_GaziniereMat
+    2100014: Props_0004_Gaziniere_Props_0004_HandleMat
+    2100016: Props_0004_Gaziniere_Props_0004_Taque1Mat
+    2100018: Props_0004_Gaziniere_Props_0004_Taque2Mat
+    2100020: Props_0004_Gaziniere_Props_0004_Taque3Mat
+    2100022: Props_0004_Gaziniere_Props_0004_Taque4Mat
     2300000: Gaziniere_Gaziniere
     2300002: Gaziniere_Handle
     2300004: Gaziniere_Taque1
     2300006: Gaziniere_Taque2
     2300008: Gaziniere_Taque3
     2300010: Gaziniere_Taque4
+    2300012: Props_0004:Gaziniere_Props_0004:Gaziniere
+    2300014: Props_0004:Gaziniere_Props_0004:Handle
+    2300016: Props_0004:Gaziniere_Props_0004:Taque1
+    2300018: Props_0004:Gaziniere_Props_0004:Taque2
+    2300020: Props_0004:Gaziniere_Props_0004:Taque3
+    2300022: Props_0004:Gaziniere_Props_0004:Taque4
     3300000: Gaziniere_Gaziniere
     3300002: Gaziniere_Handle
     3300004: Gaziniere_Taque1
     3300006: Gaziniere_Taque2
     3300008: Gaziniere_Taque3
     3300010: Gaziniere_Taque4
+    3300012: Props_0004:Gaziniere_Props_0004:Gaziniere
+    3300014: Props_0004:Gaziniere_Props_0004:Handle
+    3300016: Props_0004:Gaziniere_Props_0004:Taque1
+    3300018: Props_0004:Gaziniere_Props_0004:Taque2
+    3300020: Props_0004:Gaziniere_Props_0004:Taque3
+    3300022: Props_0004:Gaziniere_Props_0004:Taque4
     4300000: Gaziniere_Gaziniere
     4300002: Gaziniere_Handle
     4300004: Gaziniere_Taque1
     4300006: Gaziniere_Taque2
     4300008: Gaziniere_Taque3
     4300010: Gaziniere_Taque4
+    4300012: Props_0004:Gaziniere_Props_0004:Gaziniere
+    4300014: Props_0004:Gaziniere_Props_0004:Handle
+    4300016: Props_0004:Gaziniere_Props_0004:Taque1
+    4300018: Props_0004:Gaziniere_Props_0004:Taque2
+    4300020: Props_0004:Gaziniere_Props_0004:Taque3
+    4300022: Props_0004:Gaziniere_Props_0004:Taque4
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

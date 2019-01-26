@@ -8,27 +8,51 @@ ModelImporter:
     100004: Frigo_Poignee_haur
     100006: Frigo_Porte_Poignee_bas
     100008: Frigo_porte_Porte
+    100010: Props_0004:Frigo_Props_0004:Frigo
+    100012: Props_0004:Frigo_Props_0004:Poignee_haur
+    100014: Props_0004:Frigo_Props_0004:Porte_Props_0004:Poignee_bas
+    100016: Props_0004:Frigo_Props_0004:porte_Props_0004:Porte
     400000: //RootNode
     400002: Frigo_Frigo
     400004: Frigo_Poignee_haur
     400006: Frigo_Porte_Poignee_bas
     400008: Frigo_porte_Porte
+    400010: Props_0004:Frigo_Props_0004:Frigo
+    400012: Props_0004:Frigo_Props_0004:Poignee_haur
+    400014: Props_0004:Frigo_Props_0004:Porte_Props_0004:Poignee_bas
+    400016: Props_0004:Frigo_Props_0004:porte_Props_0004:Porte
     2100000: Frigo_FrigoMat
     2100002: Frigo_Poignee_haurMat
     2100004: Frigo_Porte_Poignee_basMat
     2100006: Frigo_porte_PorteMat
+    2100008: Props_0004_Frigo_Props_0004_FrigoMat
+    2100010: Props_0004_Frigo_Props_0004_Poignee_haurMat
+    2100012: Props_0004_Frigo_Props_0004_Porte_Props_0004_Poignee_basMat
+    2100014: Props_0004_Frigo_Props_0004_porte_Props_0004_PorteMat
     2300000: Frigo_Frigo
     2300002: Frigo_Poignee_haur
     2300004: Frigo_Porte_Poignee_bas
     2300006: Frigo_porte_Porte
+    2300008: Props_0004:Frigo_Props_0004:Frigo
+    2300010: Props_0004:Frigo_Props_0004:Poignee_haur
+    2300012: Props_0004:Frigo_Props_0004:Porte_Props_0004:Poignee_bas
+    2300014: Props_0004:Frigo_Props_0004:porte_Props_0004:Porte
     3300000: Frigo_Frigo
     3300002: Frigo_Poignee_haur
     3300004: Frigo_Porte_Poignee_bas
     3300006: Frigo_porte_Porte
+    3300008: Props_0004:Frigo_Props_0004:Frigo
+    3300010: Props_0004:Frigo_Props_0004:Poignee_haur
+    3300012: Props_0004:Frigo_Props_0004:Porte_Props_0004:Poignee_bas
+    3300014: Props_0004:Frigo_Props_0004:porte_Props_0004:Porte
     4300000: Frigo_Frigo
     4300002: Frigo_Poignee_haur
     4300004: Frigo_Porte_Poignee_bas
     4300006: Frigo_porte_Porte
+    4300008: Props_0004:Frigo_Props_0004:Frigo
+    4300010: Props_0004:Frigo_Props_0004:Poignee_haur
+    4300012: Props_0004:Frigo_Props_0004:Porte_Props_0004:Poignee_bas
+    4300014: Props_0004:Frigo_Props_0004:porte_Props_0004:Porte
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

@@ -6,17 +6,29 @@ ModelImporter:
     100000: Manche_Marteau
     100002: //RootNode
     100004: Marteau_Tete
+    100006: Props_0004:Manche_Props_0004:Marteau
+    100008: Props_0004:Marteau_Props_0004:Tete
     400000: Manche_Marteau
     400002: //RootNode
     400004: Marteau_Tete
+    400006: Props_0004:Manche_Props_0004:Marteau
+    400008: Props_0004:Marteau_Props_0004:Tete
     2100000: Manche_MarteauMat
     2100002: Marteau_TeteMat
+    2100004: Props_0004_Manche_Props_0004_MarteauMat
+    2100006: Props_0004_Marteau_Props_0004_TeteMat
     2300000: Manche_Marteau
     2300002: Marteau_Tete
+    2300004: Props_0004:Manche_Props_0004:Marteau
+    2300006: Props_0004:Marteau_Props_0004:Tete
     3300000: Manche_Marteau
     3300002: Marteau_Tete
+    3300004: Props_0004:Manche_Props_0004:Marteau
+    3300006: Props_0004:Marteau_Props_0004:Tete
     4300000: Manche_Marteau
     4300002: Marteau_Tete
+    4300004: Props_0004:Manche_Props_0004:Marteau
+    4300006: Props_0004:Marteau_Props_0004:Tete
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

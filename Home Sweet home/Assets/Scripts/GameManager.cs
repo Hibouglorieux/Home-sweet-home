@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 
     public enum GameStates  { starting, playing, paused, end }
     public GameStates states = GameStates.starting;
+    public GameObject cnvs;
 
     public uint fireCount;
     [SerializeField] uint maxFireCount = 10;
@@ -16,5 +17,6 @@ public class GameManager : MonoBehaviour {
     void Awake()
     {
         inst = this;
+        cnvs.SetActive(true);
     }
 }

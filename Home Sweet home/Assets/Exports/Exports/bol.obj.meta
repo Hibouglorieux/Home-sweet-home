@@ -5,12 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Bol
     100002: //RootNode
+    100004: Props_0004:Bol
     400000: Bol
     400002: //RootNode
+    400004: Props_0004:Bol
     2100000: BolMat
+    2100002: Props_0004_BolMat
     2300000: Bol
+    2300002: Props_0004:Bol
     3300000: Bol
+    3300002: Props_0004:Bol
     4300000: Bol
+    4300002: Props_0004:Bol
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

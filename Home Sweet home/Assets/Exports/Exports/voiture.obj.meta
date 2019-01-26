@@ -9,32 +9,62 @@ ModelImporter:
     100006: Voiture_Pneus_Pneu2_Pneu
     100008: Voiture_Pneus_Pneu4_Jante
     100010: Voiture_Voiture
+    100012: Props_0004:Voiture_Props_0004:Pneu3_Jante_Props_0004:Pneus
+    100014: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu1_Jante
+    100016: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu2_Pneu
+    100018: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu4_Jante
+    100020: Props_0004:Voiture_Props_0004:Voiture
     400000: //RootNode
     400002: Voiture_Pneu3_Jante_Pneus
     400004: Voiture_Pneus_Pneu1_Jante
     400006: Voiture_Pneus_Pneu2_Pneu
     400008: Voiture_Pneus_Pneu4_Jante
     400010: Voiture_Voiture
+    400012: Props_0004:Voiture_Props_0004:Pneu3_Jante_Props_0004:Pneus
+    400014: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu1_Jante
+    400016: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu2_Pneu
+    400018: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu4_Jante
+    400020: Props_0004:Voiture_Props_0004:Voiture
     2100000: Voiture_Pneu3_Jante_PneusMat
     2100002: Voiture_Pneus_Pneu1_JanteMat
     2100004: Voiture_Pneus_Pneu2_PneuMat
     2100006: Voiture_Pneus_Pneu4_JanteMat
     2100008: Voiture_VoitureMat
+    2100010: Props_0004_Voiture_Props_0004_Pneu3_Jante_Props_0004_PneusMat
+    2100012: Props_0004_Voiture_Props_0004_Pneus_Props_0004_Pneu1_JanteMat
+    2100014: Props_0004_Voiture_Props_0004_Pneus_Props_0004_Pneu2_PneuMat
+    2100016: Props_0004_Voiture_Props_0004_Pneus_Props_0004_Pneu4_JanteMat
+    2100018: Props_0004_Voiture_Props_0004_VoitureMat
     2300000: Voiture_Pneu3_Jante_Pneus
     2300002: Voiture_Pneus_Pneu1_Jante
     2300004: Voiture_Pneus_Pneu2_Pneu
     2300006: Voiture_Pneus_Pneu4_Jante
     2300008: Voiture_Voiture
+    2300010: Props_0004:Voiture_Props_0004:Pneu3_Jante_Props_0004:Pneus
+    2300012: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu1_Jante
+    2300014: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu2_Pneu
+    2300016: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu4_Jante
+    2300018: Props_0004:Voiture_Props_0004:Voiture
     3300000: Voiture_Pneu3_Jante_Pneus
     3300002: Voiture_Pneus_Pneu1_Jante
     3300004: Voiture_Pneus_Pneu2_Pneu
     3300006: Voiture_Pneus_Pneu4_Jante
     3300008: Voiture_Voiture
+    3300010: Props_0004:Voiture_Props_0004:Pneu3_Jante_Props_0004:Pneus
+    3300012: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu1_Jante
+    3300014: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu2_Pneu
+    3300016: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu4_Jante
+    3300018: Props_0004:Voiture_Props_0004:Voiture
     4300000: Voiture_Pneu3_Jante_Pneus
     4300002: Voiture_Pneus_Pneu1_Jante
     4300004: Voiture_Pneus_Pneu2_Pneu
     4300006: Voiture_Pneus_Pneu4_Jante
     4300008: Voiture_Voiture
+    4300010: Props_0004:Voiture_Props_0004:Pneu3_Jante_Props_0004:Pneus
+    4300012: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu1_Jante
+    4300014: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu2_Pneu
+    4300016: Props_0004:Voiture_Props_0004:Pneus_Props_0004:Pneu4_Jante
+    4300018: Props_0004:Voiture_Props_0004:Voiture
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

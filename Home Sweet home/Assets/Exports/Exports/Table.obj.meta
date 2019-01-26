@@ -5,12 +5,18 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Table
     100002: //RootNode
+    100004: Props_0004:Table
     400000: Table
     400002: //RootNode
+    400004: Props_0004:Table
     2100000: TableMat
+    2100002: Props_0004_TableMat
     2300000: Table
+    2300002: Props_0004:Table
     3300000: Table
+    3300002: Props_0004:Table
     4300000: Table
+    4300002: Props_0004:Table
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

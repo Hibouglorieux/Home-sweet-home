@@ -35,6 +35,7 @@ public class CanvasManager : MonoBehaviour {
     void Start()
     {
         StartCoroutine(UIAnimation.Fade(_fade_front, FadeType.Out, .6f));
+        _button_play.Select();
     }
 
     void Update()
