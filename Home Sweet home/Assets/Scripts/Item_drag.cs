@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item_drag : Item {
 
     public Drag_item id;
+    public bool active;
 
     Transform _transform;
     Rigidbody _rb;
@@ -37,5 +38,14 @@ public class Item_drag : Item {
     {
         _transform.position = position;
         _transform.rotation = rotation;
+    }
+
+    public virtual void Activate()
+    {
+        active = true;
+    }
+    public virtual void Desactivate()
+    {
+        active = false;
     }
 }

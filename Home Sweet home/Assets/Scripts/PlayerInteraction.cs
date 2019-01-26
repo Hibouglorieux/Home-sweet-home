@@ -17,8 +17,14 @@ public class PlayerInteraction : MonoBehaviour
             bool grabNow = false;
             if (_draggedItem == null)
                 grabNow = TryGrab();
-            if (!grabNow)
-                TryInteract();
+            else _draggedItem.Activate();
+            //if (!grabNow)
+                //TryInteract();
+        }
+        else if (Input.GetKeyUp("joystick button 0"))
+        {
+            if (_draggedItem != null)
+                _draggedItem.Desactivate();
         }
         else if (Input.GetKeyDown("joystick button 1") && _draggedItem != null)
             Drop();
