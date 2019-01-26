@@ -5,7 +5,7 @@ using UnityEngine;
 public class Event_manager : MonoBehaviour {
 
     [SerializeField] int i;
-    int[] tab = new int[7]; // nombre d'evenements a faire pop
+    int[] tab = new int[8]; // nombre d'evenements a faire pop
     [SerializeField] int event_rate;
     [SerializeField] int random_event;
     [SerializeField] int Ending_timer = 100000;
@@ -17,13 +17,14 @@ public class Event_manager : MonoBehaviour {
     public GameObject electricity;
     public GameObject cthulhu;
     public GameObject sink;
+    public GameObject fruit;
 
 
     // Use this for initialization
     void Start() {
         i = 0;
         Debug.Log(tab.Length);
-        for (int j = 0; j < 7; j++)
+        for (int j = 0; j < 8; j++)
             tab[j] = -1;
 
     }
@@ -43,16 +44,16 @@ public class Event_manager : MonoBehaviour {
 
     GameObject Chose_event(bool mod)
     {
-        int event_number = Random.Range(0, 7);
+        int event_number = Random.Range(0, 8);
         int count = 0;
-        for (int k = 0; k <= 6; k++)
+        for (int k = 0; k <= 7; k++)
         {
             if (mod == true)
                 break;
             if (event_number == tab[k])
                 return (Chose_event(true));
         }
-        while (count < 6  && tab[count] != -1)
+        while (count < 7  && tab[count] != -1)
             count++;
         tab[count] = event_number;
         switch (event_number)
@@ -71,6 +72,8 @@ public class Event_manager : MonoBehaviour {
                 return (cthulhu);
             case 6:
                 return (sink);
+            case 7:
+                return (fruit);
             default:
                 {
                     Debug.Log("default in Chose_event() from Event_manager");

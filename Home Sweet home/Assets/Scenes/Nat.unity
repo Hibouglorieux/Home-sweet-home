@@ -1267,6 +1267,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1682b051f1965394698b668615247f52, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &992122469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1207893961756270, guid: 9d86bbabcc4052749891c8a9e88d47cd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1940328597}
 --- !u!1 &1017446440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6598,11 +6603,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1306183932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572d434ff1abb874e9e26153c9378b38, type: 3}
+  m_Script: {fileID: 11500000, guid: 1745b8d07772ffc44a669a1d3f62c116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  active: 0
+  needed_item: 0
+  timer: {fileID: 1005467281371756, guid: e731e50cbf1f40b4083e3d1c0eb0a33c, type: 2}
+  duration_of_event: 30
+  timer_script: {fileID: 0}
+  Fruit_prefab: {fileID: 992122469}
 --- !u!54 &1306183938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6824,7 +6832,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e51123879ec5f8b4f9eb91370505fa72, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e51123879ec5f8b4f9eb91370505fa72, type: 3}
+      propertyPath: m_Name
+      value: Bowl of fruits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e51123879ec5f8b4f9eb91370505fa72, type: 3}
@@ -12776,6 +12788,7 @@ MonoBehaviour:
   electricity: {fileID: 0}
   cthulhu: {fileID: 0}
   sink: {fileID: 1858306523}
+  fruit: {fileID: 1306183932}
 --- !u!4 &2080197019
 Transform:
   m_ObjectHideFlags: 0
