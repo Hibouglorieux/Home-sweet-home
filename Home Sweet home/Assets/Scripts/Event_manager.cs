@@ -8,7 +8,6 @@ public class Event_manager : MonoBehaviour {
     int[] tab = new int[9]; // nombre d'evenements a faire pop
     [SerializeField] int event_rate;
     [SerializeField] int random_event;
-    [SerializeField] float Ending_timer = 120;
     [SerializeField] float suceed_timer;
 
     public GameObject shelf;

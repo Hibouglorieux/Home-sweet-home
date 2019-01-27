@@ -148,6 +148,7 @@ public class CanvasManager : MonoBehaviour {
     }
     IEnumerator HidePauseAnim()
     {
+        GameManager.inst.states = GameManager.GameStates.playing;
         yield return UIAnimation.FadeButton(_button_menu, FadeType.Out, .2f);
         yield return UIAnimation.Fade(_pause_text, FadeType.Out, .2f);
         yield return UIAnimation.FadeButton(_button_resume, FadeType.Out, .2f);
@@ -155,7 +156,6 @@ public class CanvasManager : MonoBehaviour {
 
         yield return new WaitForSeconds(.1f);
         _pause.gameObject.SetActive(false);
-        GameManager.inst.states = GameManager.GameStates.playing;
     }
     IEnumerator HideMenuAnim()
     {
