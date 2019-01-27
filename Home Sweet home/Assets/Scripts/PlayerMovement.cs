@@ -7,9 +7,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _moveSpeed = 24, _maxMoveSpeed = 8, _rotationSpeed = 100;
     float _horizontal = 0, _vertical = 0;
 
-    Rigidbody _rb;
+    [SerializeField] Animator _anim;
 
-    public Vector3 vc;
+    Rigidbody _rb;
 
     void Start()
     {
@@ -40,6 +40,9 @@ public class PlayerMovement : MonoBehaviour
             //Movement
             //_rb.velocity = Vector3.zero;
             _rb.AddForce(transform.forward * _moveSpeed, ForceMode.Force);
+
         }
+
+        _anim.SetFloat("Speed", new Vector2(_rb.velocity.x, _rb.velocity.z).sqrMagnitude);
     }
 }

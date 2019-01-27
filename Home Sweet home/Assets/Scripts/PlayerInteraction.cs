@@ -12,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] Item_drag _draggedItem;
     [SerializeField] LayerMask _grabLayer, _interactLayer;
 
+    [SerializeField] float _grabRadius = 1;
+
     private void Awake()
     {
         inst = this;
@@ -61,7 +63,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public bool TryInteract()
     {
-        Collider[] cols = Physics.OverlapSphere(_grabCenter.position, .8f, _interactLayer);
+        Collider[] cols = Physics.OverlapSphere(_grabCenter.position, _grabRadius, _interactLayer);
         if (cols.Length <= 0) return false;
 
         Interractable_item iteract = cols[0].GetComponent<Interractable_item>();
