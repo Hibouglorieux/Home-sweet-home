@@ -91,7 +91,7 @@ public class Event_manager : MonoBehaviour {
         if (i >= event_rate && Ending_timer - 1000 > 0)
             Launch_event(Chose_event(false)); // a revoir ?
         if (Ending_timer <= 0)
-            ; // faire fin du jeu
+            CanvasManager.inst.DisplayWonDialogue(); // faire fin du jeu
         Ending_timer -= Time.deltaTime;
 	}
 }
