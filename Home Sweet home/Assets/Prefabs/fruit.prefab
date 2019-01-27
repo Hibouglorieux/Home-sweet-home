@@ -36,11 +36,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4185810606067132}
   - component: {fileID: 54779915525239066}
-  - component: {fileID: 64800652099204684}
   - component: {fileID: 114204797842178964}
   - component: {fileID: 199124613582257804}
   - component: {fileID: 198160157942853364}
   - component: {fileID: 82679678032334092}
+  - component: {fileID: 135331593493276458}
   m_Layer: 0
   m_Name: fruit
   m_TagString: Untagged
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1299523675475380}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.461, y: 1.574, z: -0.796}
+  m_LocalPosition: {x: 14.108181, y: 13.958643, z: -6.6010785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4382304365482442}
@@ -163,20 +163,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!64 &64800652099204684
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1299523675475380}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: -1
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 51874d40bd5c9914fbc0ad579e9ffa74, type: 3}
 --- !u!82 &82679678032334092
 AudioSource:
   m_ObjectHideFlags: 1
@@ -285,6 +271,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   active: 0
+--- !u!135 &135331593493276458
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1299523675475380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135501840376093288
 SphereCollider:
   m_ObjectHideFlags: 1
