@@ -7,7 +7,6 @@ public class Fruit_content : Interractable_item {
     [SerializeField] GameObject Fruit_prefab;
     private GameObject inst_prefab;
 
-
     public override void StartEvent()
     {
         inst_prefab = Instantiate(Fruit_prefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), new Quaternion());
