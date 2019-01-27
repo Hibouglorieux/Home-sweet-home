@@ -36,7 +36,6 @@ public class Fridge : Interractable_item {
 
     void Update()
     {
-        Debug.Log(door.eulerAngles.y);
         if (ini == true && door.eulerAngles.y > 150)
             door.Rotate(new Vector3(0, -0.5f, 0));
     }
