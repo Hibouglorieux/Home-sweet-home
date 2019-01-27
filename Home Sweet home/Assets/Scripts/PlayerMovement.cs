@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             //Rotation
             float angle = 180 - Mathf.Atan2(-_vertical, -_horizontal) * 180 / Mathf.PI + 90;
             Quaternion targetRota = Quaternion.AngleAxis(angle, Vector3.up);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRota, Time.deltaTime * _rotationSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRota, Time.fixedDeltaTime * _rotationSpeed);
 
             //Movement
             //_rb.velocity = Vector3.zero;

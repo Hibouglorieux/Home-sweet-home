@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Disjoncter : Interractable_item
 {
-
     [SerializeField] ParticleSystem _particle;
     [SerializeField] AudioSource _source;
 

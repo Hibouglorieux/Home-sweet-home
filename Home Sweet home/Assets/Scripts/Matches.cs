@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Matches : MonoBehaviour {
 
-    [SerializeField] GameObject _fire;
+    [SerializeField] GameObject _fire, _timer;
     Rigidbody _rb;
 
     float _lifeTime = 4f;
@@ -18,7 +18,14 @@ public class Matches : MonoBehaviour {
     public void OnCollisionEnter(Collision collision)
     {
         if (GameManager.inst.canAddFire)
-            Instantiate(_fire).transform.position = collision.contacts[0].point;
+        {
+            Transform fire = Instantiate(_fire).transform;
+            fire.position = collision.contacts[0].point;
+            Transform timer = Instantiate(_timer).transform;
+            timer.parent = fire;
+            timer.position = fire.position + Vector3.up * 4;
+            timer.GetComponent<Timer>().parentType = (int)Item.Interract_item.fire;
+        }
 
         if (_rb.velocity.sqrMagnitude <= .2f)
             Destroy(gameObject);

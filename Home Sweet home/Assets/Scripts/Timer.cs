@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour {
     private Transform image;
     private int count = 0;
 
+    public int parentType = -1;
+
 	void Start () {
         transform.LookAt(Camera.main.transform);
         transform.eulerAngles = (new Vector3(-transform.eulerAngles.x, 0, 0));

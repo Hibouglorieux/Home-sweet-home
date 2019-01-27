@@ -66,6 +66,10 @@ public class CanvasManager : MonoBehaviour {
 
     public void Pause()
     {
+        if (GameManager.inst.states == GameManager.GameStates.starting)
+            return;
+
+        Time.timeScale = 0;
         GameManager.inst.states = GameManager.GameStates.paused;
         _pause.gameObject.SetActive(true);
 
@@ -78,6 +82,7 @@ public class CanvasManager : MonoBehaviour {
     }
     public void Unpause()
     {
+        Time.timeScale = 1;
         StartCoroutine(HidePauseAnim());
     }
 
