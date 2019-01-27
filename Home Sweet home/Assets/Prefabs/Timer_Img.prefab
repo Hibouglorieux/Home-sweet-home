@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8fffdadd2279f488cdabe62aadb0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_timer: 25
+  max_timer: 29
   actual_timer: 0
   parentType: -1
 --- !u!114 &114466401092920044
