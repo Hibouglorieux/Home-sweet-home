@@ -27,6 +27,7 @@ public class Fridge : Interractable_item {
         {
             Debug.Log("used"); //ok
                 door.eulerAngles = new Vector3(0, -90, 0);
+            if (timer_script != null)
                 Destroy(timer_script.gameObject);
                 timer_script = null;
             ini = false;

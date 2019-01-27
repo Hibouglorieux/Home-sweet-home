@@ -28,16 +28,17 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField] Button _button_play, _button_quit;
     float remainingTime;
 
+    bool end = false;
     bool _lanching = false;
 
-    string[] deathReason = new string[] { "With no place left to put your books in",
+    string[] deathReason = new string[] { "You've reached the end of your shelf life",
+                                                           "It's not cool anymore",
                                                            "",
-                                                           "",
-                                                           "",
-                                                           "",
-                                                           "",
-                                                           "",
-                                                           "",
+                                                           "BEEP BEEP BEEP",
+                                                           "What a shock !",
+                                                           "And you won't be alone ever again.",
+                                                           "But at least you have a sweet swimming pool !",
+                                                           "What a rotten end !",
                                                            "And you died.",
 
                                                         };
@@ -82,12 +83,18 @@ public class CanvasManager : MonoBehaviour {
 
     public void DisplayDieDialogue(int deathDesc)
     {
+        if (end)
+            return;
+        end = true;
         _desc.text = Get_dialog(deathDesc);
         GameManager.inst.states = GameManager.GameStates.end;
         StartCoroutine(DisplayDieAnim());
     }
     public void DisplayWonDialogue()
     {
+        if (end)
+            return;
+        end = true;
         _die.text = "Home sweet home";
         _desc.text = "You succeed to keep it sweet";
         GameManager.inst.states = GameManager.GameStates.end;

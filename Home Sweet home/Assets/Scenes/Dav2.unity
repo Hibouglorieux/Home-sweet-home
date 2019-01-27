@@ -8688,6 +8688,11 @@ Prefab:
       propertyPath: fruit
       value: 
       objectReference: {fileID: 911545597}
+    - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
+        type: 2}
+      propertyPath: Ending_timer
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1807c195b07334bbde3f50d89162a8, type: 2}
   m_IsPrefabAsset: 0

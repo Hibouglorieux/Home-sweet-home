@@ -32,7 +32,7 @@ public class Sink : Interractable_item {
         timer_script.max_timer = duration_of_event;
         ini = false;
         particles.Play();
-        timer_script.parentType = (int)Item.Interract_item.shelf;
+        timer_script.parentType = (int)Item.Interract_item.sink;
 
 
         _source.clip = _begining;
