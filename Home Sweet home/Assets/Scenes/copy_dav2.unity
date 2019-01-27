@@ -5378,11 +5378,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114406332155033372, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 2}
-      propertyPath: deathReason.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224025602888379744, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -5472,16 +5467,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114406332155033372, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 2}
-      propertyPath: deathReason.Array.data[8]
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114602460971813770, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 2}
-      propertyPath: m_Text
-      value: Your home isn't sweet anymore.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ed383c45d4b7f49a2a2c461e0c7355, type: 2}
