@@ -575,7 +575,6 @@ MonoBehaviour:
   _title: {fileID: 114285657852802192}
   _button_play: {fileID: 114619962971812562}
   _button_quit: {fileID: 114690617160656170}
-  deathReason: []
 --- !u!114 &114602460971813770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -608,7 +607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: You die
+  m_Text: Your home isn't sweet anymore.
 --- !u!114 &114619962971812562
 MonoBehaviour:
   m_ObjectHideFlags: 1

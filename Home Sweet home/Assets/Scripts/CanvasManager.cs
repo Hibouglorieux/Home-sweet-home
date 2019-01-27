@@ -31,14 +31,14 @@ public class CanvasManager : MonoBehaviour {
     bool _lanching = false;
 
     string[] deathReason = new string[] { "With no place left to put your books in",
-                                                           "1",
-                                                           "2",
-                                                           "3",
-                                                           "4",
-                                                           "5",
-                                                           "6",
-                                                           "7",
-                                                           "8",
+                                                           "",
+                                                           "",
+                                                           "",
+                                                           "",
+                                                           "",
+                                                           "",
+                                                           "",
+                                                           "And you died.",
 
                                                         };
 
@@ -77,7 +77,7 @@ public class CanvasManager : MonoBehaviour {
     private string Get_dialog(int index)
     {
         Debug.Log(index);
-        return index < deathReason.Length ? deathReason[index] : "Because of death";
+        return index < deathReason.Length ? deathReason[index] : "";
     }
 
     public void DisplayDieDialogue(int deathDesc)
