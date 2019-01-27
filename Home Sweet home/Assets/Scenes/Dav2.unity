@@ -917,6 +917,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4067804181873718, guid: ed314803a3b6b95419ac3118bb5331b6,
     type: 2}
   m_PrefabInternal: {fileID: 248960380}
+--- !u!1 &253371432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163319013091584, guid: b79bcc0936d728a41b8431b07a31be90,
+    type: 2}
+  m_PrefabInternal: {fileID: 118216517}
 --- !u!1001 &339627935
 Prefab:
   m_ObjectHideFlags: 0
@@ -1867,6 +1872,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 4.48, z: 5}
   m_Center: {x: 0, y: 0, z: 2.5}
+--- !u!1 &588905546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1163319013091584, guid: b79bcc0936d728a41b8431b07a31be90,
+    type: 2}
+  m_PrefabInternal: {fileID: 1186391596}
 --- !u!1001 &590789053
 Prefab:
   m_ObjectHideFlags: 0
@@ -6698,6 +6708,16 @@ Prefab:
       objectReference: {fileID: 1918362275}
     - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
         type: 2}
+      propertyPath: shelf2
+      value: 
+      objectReference: {fileID: 253371432}
+    - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
+        type: 2}
+      propertyPath: shelf3
+      value: 
+      objectReference: {fileID: 588905546}
+    - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
+        type: 2}
       propertyPath: fridge
       value: 
       objectReference: {fileID: 352553271}
@@ -6726,6 +6746,11 @@ Prefab:
       propertyPath: sink
       value: 
       objectReference: {fileID: 995108148}
+    - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
+        type: 2}
+      propertyPath: sink2
+      value: 
+      objectReference: {fileID: 2088752664}
     - target: {fileID: 114583779426383716, guid: 6b1807c195b07334bbde3f50d89162a8,
         type: 2}
       propertyPath: fruit
@@ -7801,6 +7826,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 64.247, y: -32.398003, z: -1.8950001}
+--- !u!1 &2088752664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1399411926977756, guid: 1682b051f1965394698b668615247f52,
+    type: 2}
+  m_PrefabInternal: {fileID: 944825774}
 --- !u!1 &2098703487
 GameObject:
   m_ObjectHideFlags: 0

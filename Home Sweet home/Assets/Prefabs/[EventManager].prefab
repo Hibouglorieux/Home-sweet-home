@@ -56,10 +56,13 @@ MonoBehaviour:
   random_event: 300
   Ending_timer: 10000
   shelf: {fileID: 0}
+  shelf2: {fileID: 0}
+  shelf3: {fileID: 0}
   fridge: {fileID: 0}
   gaz: {fileID: 0}
   car: {fileID: 0}
   electricity: {fileID: 0}
   cthulhu: {fileID: 0}
   sink: {fileID: 0}
+  sink2: {fileID: 0}
   fruit: {fileID: 0}
