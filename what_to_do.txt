@@ -1,0 +1,7 @@
+--game over
+--peaufiner la maison
+--trouver une bonne camera
+--musique d'ambiance
+--frigo son + givre
+--revoir hauteur murs
+--timer du fruit
