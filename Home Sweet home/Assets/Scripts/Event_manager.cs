@@ -8,7 +8,7 @@ public class Event_manager : MonoBehaviour {
     int[] tab = new int[8]; // nombre d'evenements a faire pop
     [SerializeField] int event_rate;
     [SerializeField] int random_event;
-    [SerializeField] int Ending_timer = 100000;
+    [SerializeField] float Ending_timer = 120;
 
     public GameObject shelf;
     public GameObject fridge;
@@ -92,6 +92,6 @@ public class Event_manager : MonoBehaviour {
             Launch_event(Chose_event(false)); // a revoir ?
         if (Ending_timer <= 0)
             ; // faire fin du jeu
-        Ending_timer--;
+        Ending_timer -= Time.deltaTime;
 	}
 }

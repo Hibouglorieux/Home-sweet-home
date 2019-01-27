@@ -28,7 +28,19 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField] Button _button_play, _button_quit;
     float remainingTime;
 
-    [SerializeField] string[] deathReason;
+    bool _lanching = false;
+
+    string[] deathReason = new string[] { "With no place left to put your books in",
+                                                           "1",
+                                                           "2",
+                                                           "3",
+                                                           "4",
+                                                           "5",
+                                                           "6",
+                                                           "7",
+                                                           "8",
+
+                                                        };
 
     void Awake()
     {
@@ -64,7 +76,7 @@ public class CanvasManager : MonoBehaviour {
 
     private string Get_dialog(int index)
     {
-        
+        Debug.Log(index);
         return index < deathReason.Length ? deathReason[index] : "Because of death";
     }
 
@@ -76,7 +88,11 @@ public class CanvasManager : MonoBehaviour {
     }
     public void HideMenu()
     {
-        StartCoroutine(HideMenuAnim());
+        if (!_lanching)
+        {
+            _lanching = true;
+            StartCoroutine(HideMenuAnim());
+        }
     }
 
     public void Pause()
@@ -146,6 +162,9 @@ public class CanvasManager : MonoBehaviour {
 
     public void Quit()
     {
+        if (_lanching && GameManager.inst.states == GameManager.GameStates.starting)
+            return;
+
         Application.Quit();
     }
 }
