@@ -86,6 +86,13 @@ public class CanvasManager : MonoBehaviour {
         GameManager.inst.states = GameManager.GameStates.end;
         StartCoroutine(DisplayDieAnim());
     }
+    public void DisplayWonDialogue()
+    {
+        _die.text = "Home sweet home";
+        _desc.text = "You succeed to keep it sweet";
+        GameManager.inst.states = GameManager.GameStates.end;
+        StartCoroutine(DisplayDieAnim());
+    }
     public void HideMenu()
     {
         if (!_lanching)
