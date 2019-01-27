@@ -9,6 +9,7 @@ public class Event_manager : MonoBehaviour {
     [SerializeField] int event_rate;
     [SerializeField] int random_event;
     [SerializeField] float Ending_timer = 120;
+    [SerializeField] float suceed_timer;
 
     public GameObject shelf;
     public GameObject shelf2;
@@ -111,10 +112,10 @@ public class Event_manager : MonoBehaviour {
         if (i == 0)
             i = Random.Range(0, random_event); // a revoir ?
         i++;
-        if (i >= event_rate && Ending_timer - 1000 > 0)
+        if (i >= event_rate && suceed_timer > 0)
             Launch_event(Chose_event(false)); // a revoir ?
-        if (Ending_timer <= 0)
+        if (suceed_timer <= 0)
             CanvasManager.inst.DisplayWonDialogue(); // faire fin du jeu
-        Ending_timer -= Time.deltaTime;
+        suceed_timer -= Time.deltaTime;
 	}
 }
