@@ -164,6 +164,7 @@ public class CanvasManager : MonoBehaviour {
 
     public void Menu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
