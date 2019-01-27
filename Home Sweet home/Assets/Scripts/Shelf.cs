@@ -6,6 +6,7 @@ public class Shelf : Interractable_item {
 
     [SerializeField] Transform child;
     private bool ini = false;
+    [SerializeField] AudioSource sound;
     // Use this for initialization
     private void Awake()
     {
@@ -41,12 +42,13 @@ public class Shelf : Interractable_item {
     {
         timer_script = Instantiate(timer, new Vector3(transform.position.x, 4, transform.position.z), new Quaternion()).GetComponent<Timer>();
         timer_script.max_timer = duration_of_event;
+        sound.Play();
         ini = true;
     }
 
     void Update () {
         if (ini == true && child.rotation.x > -0.14f)
-             child.eulerAngles -= new Vector3(0.5f, 0, 0);
+             child.eulerAngles -= new Vector3(0.2f, 0, 0);
 		
 	}
 }
