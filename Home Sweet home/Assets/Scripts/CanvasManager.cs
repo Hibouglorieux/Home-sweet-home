@@ -12,6 +12,7 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField] Image _fade_back, _fade_front;
     [Space(10)]
     [Header("Death")]
+    [SerializeField] GameObject _death;
     [SerializeField] Text _die;
     [SerializeField] Text _desc;
 
@@ -26,6 +27,8 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField] Text _title;
     [SerializeField] Button _button_play, _button_quit;
     float remainingTime;
+
+    [SerializeField] string[] deathReason;
 
     void Awake()
     {
@@ -59,9 +62,15 @@ public class CanvasManager : MonoBehaviour {
         }
     }
 
-    public void DisplayDieDialogue(string deathDesc)
+    private string Get_dialog(int index)
     {
-        _desc.text = deathDesc;
+        
+        return index < deathReason.Length ? deathReason[index] : "Because of death";
+    }
+
+    public void DisplayDieDialogue(int deathDesc)
+    {
+        _desc.text = Get_dialog(deathDesc);
         GameManager.inst.states = GameManager.GameStates.end;
         StartCoroutine(DisplayDieAnim());
     }
@@ -94,6 +103,7 @@ public class CanvasManager : MonoBehaviour {
 
     IEnumerator DisplayDieAnim()
     {
+        _death.gameObject.SetActive(true);
         float duration = .4f;
         yield return UIAnimation.Fade(_fade_back, FadeType.In, duration, .6f);
         yield return UIAnimation.Fade(_die, FadeType.In, duration);

@@ -12,6 +12,7 @@ public class Fruit_content : Interractable_item {
         inst_prefab = Instantiate(Fruit_prefab, new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), new Quaternion());
         timer_script = Instantiate(timer, new Vector3(transform.position.x, 4, transform.position.z), new Quaternion(), inst_prefab.transform).GetComponent<Timer>();
         timer_script.max_timer = duration_of_event;
+        timer_script.parentType = (int)Item.Interract_item.fruit;
         // gerer les particules (les mettre sur fruit_prefab a la palce ?)
     }
 

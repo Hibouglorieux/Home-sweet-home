@@ -564,6 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fade_back: {fileID: 114316201038510084}
   _fade_front: {fileID: 114856164410780020}
+  _death: {fileID: 1103337654307006}
   _die: {fileID: 114602460971813770}
   _desc: {fileID: 114634178937439950}
   _pause: {fileID: 1570117592267572}
@@ -574,6 +575,7 @@ MonoBehaviour:
   _title: {fileID: 114285657852802192}
   _button_play: {fileID: 114619962971812562}
   _button_quit: {fileID: 114690617160656170}
+  deathReason: []
 --- !u!114 &114602460971813770
 MonoBehaviour:
   m_ObjectHideFlags: 1

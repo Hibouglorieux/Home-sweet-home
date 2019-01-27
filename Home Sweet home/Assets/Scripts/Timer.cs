@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour {
                         count++;
                 }
             }
-                if (count >= 100) // valeur a changer
-                ; //gameover
+        if (percent > 1)
+            CanvasManager.inst.DisplayDieDialogue(parentType);
     }
 }

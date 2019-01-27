@@ -636,8 +636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   needed_item: 6
-  timer: {fileID: 0}
-  duration_of_event: 0
+  timer: {fileID: 1005467281371756, guid: e731e50cbf1f40b4083e3d1c0eb0a33c, type: 2}
+  duration_of_event: 28
   timer_script: {fileID: 0}
 --- !u!114 &114817908627084944
 MonoBehaviour:

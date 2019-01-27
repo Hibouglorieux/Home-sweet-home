@@ -23,7 +23,6 @@ public class Event_manager : MonoBehaviour {
     // Use this for initialization
     void Start() {
         i = 0;
-        Debug.Log(tab.Length);
         for (int j = 0; j < 8; j++)
             tab[j] = -1;
 

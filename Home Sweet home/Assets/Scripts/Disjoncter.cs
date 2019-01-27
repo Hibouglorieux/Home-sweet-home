@@ -26,6 +26,7 @@ public class Disjoncter : Interractable_item
     {
         timer_script = Instantiate(timer, new Vector3(transform.position.x, 4, transform.position.z), new Quaternion()).GetComponent<Timer>();
         timer_script.max_timer = duration_of_event;
+        timer_script.parentType = (int)Item.Interract_item.electricity;
 
         StartCoroutine(LoopSparkSound());
         _particle.Play();
