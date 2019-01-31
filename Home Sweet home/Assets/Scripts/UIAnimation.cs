@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,17 +14,27 @@ public class UIAnimation {
             obj.color = new Color(obj.color.r, obj.color.g, obj.color.b, Mathf.Abs(((int)fade) - (i / duration)) * mult);
             yield return null;
         }
+        obj.color = new Color(obj.color.r, obj.color.g, obj.color.b, (1 - (int)fade) * mult);
+    }
+
+    public static IEnumerator FadeGroup(Graphic[] objs, FadeType fade, float duration, float mult = 1)
+    {
+        for (float i = 0; i <= duration; i += Time.unscaledDeltaTime)
+        {
+            for (int j = 0; j < objs.Length; j++)
+                if (objs[j] != null)
+                    objs[j].color = new Color(objs[j].color.r, objs[j].color.g, objs[j].color.b, Mathf.Abs(((int)fade) - (i / duration)) * mult);
+            yield return null;
+        }
+        for (int j = 0; j < objs.Length; j++)
+            if (objs[j] != null)
+                objs[j].color = new Color(objs[j].color.r, objs[j].color.g, objs[j].color.b, (1 - Mathf.Abs(((int)fade)) * mult));
     }
 
     public static IEnumerator FadeButton(Button obj, FadeType fade, float duration, float mult = 1)
     {
-        Image img = obj.GetComponent<Image>();
-        Text text = obj.transform.GetChild(0).GetComponent<Text>();
-        for (float i = 0; i <= duration; i += Time.unscaledDeltaTime)
-        {
-            img.color = new Color(img.color.r, img.color.g, img.color.b, Mathf.Abs(((int)fade) - (i / duration)) * mult);
-            text.color = new Color(text.color.r, text.color.g, text.color.b, Mathf.Abs(((int)fade) - (i / duration)) * mult);
-            yield return null;
-        }
+        Image img = obj.transform.GetChild(1).GetComponent<Image>();
+        TextMeshProUGUI text = obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+        return FadeGroup(new Graphic[]{ img, text } , fade, duration, mult);
     }
 }

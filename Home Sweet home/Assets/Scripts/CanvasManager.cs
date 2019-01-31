@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using UnityEngine.Audio;
+using TMPro;
 
 public class CanvasManager : MonoBehaviour {
 
@@ -13,19 +15,27 @@ public class CanvasManager : MonoBehaviour {
     [Space(10)]
     [Header("Death")]
     [SerializeField] GameObject _death;
-    [SerializeField] Text _die;
-    [SerializeField] Text _desc;
+    [SerializeField] TextMeshProUGUI _die;
+    [SerializeField] TextMeshProUGUI _desc;
 
     [Space(10)]
     [Header("Pause")]
     [SerializeField] GameObject _pause;
-    [SerializeField] Text _pause_text;
+    [SerializeField] TextMeshProUGUI _pause_text;
     [SerializeField] Button _button_resume, _button_menu;
+
+    [Space(10)]
+    [Header("Options")]
+    [SerializeField] GameObject _options;
+    [SerializeField] TextMeshProUGUI _options_text;
+    [SerializeField] Button _button_return;
+    [SerializeField] Graphic[] _controlles;
+
     [Space(10)]
     [Header("Menu")]
     [SerializeField] GameObject _menu;
-    [SerializeField] Text _title;
-    [SerializeField] Button _button_play, _button_quit;
+    [SerializeField] TextMeshProUGUI _title;
+    [SerializeField] Button _button_play, _button_options, _button_quit;
     float remainingTime;
 
     bool end = false;
@@ -56,7 +66,10 @@ public class CanvasManager : MonoBehaviour {
     
     IEnumerator StartFade()
     {
-        yield return UIAnimation.Fade(_fade_front, FadeType.Out, .6f);
+        _fade_front.gameObject.SetActive(true);
+        _fade_back.gameObject.SetActive(true);
+        _menu.SetActive(true);
+        yield return UIAnimation.Fade(_fade_front, FadeType.Out, .4f);
         _fade_front.gameObject.SetActive(false);
     }
 
@@ -105,7 +118,7 @@ public class CanvasManager : MonoBehaviour {
         if (!_lanching)
         {
             _lanching = true;
-            StartCoroutine(HideMenuAnim());
+            StartCoroutine(LaunchGame());
         }
     }
 
@@ -129,6 +142,17 @@ public class CanvasManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         StartCoroutine(HidePauseAnim());
+    }
+
+    public void DisplayOptions()
+    {        
+
+        StartCoroutine(DisplayOptionsAnim());
+    }
+
+    public void HideOptions()
+    {
+        StartCoroutine(HideOptionsAnim());
     }
 
     IEnumerator DisplayDieAnim()
@@ -157,16 +181,54 @@ public class CanvasManager : MonoBehaviour {
         yield return new WaitForSeconds(.1f);
         _pause.gameObject.SetActive(false);
     }
-    IEnumerator HideMenuAnim()
-    {
-        yield return UIAnimation.FadeButton(_button_quit, FadeType.Out, .2f);
-        yield return UIAnimation.Fade(_title, FadeType.Out, .2f);
-        yield return UIAnimation.FadeButton(_button_play, FadeType.Out, .2f);
-        yield return UIAnimation.Fade(_fade_back, FadeType.Out, .2f);
 
-        yield return new WaitForSeconds(.1f);
+    IEnumerator LaunchGame()
+    {
+        yield return HideMenuAnim();
+        yield return UIAnimation.Fade(_fade_back, FadeType.Out, .2f);
+        yield return GameManager.inst.states = GameManager.GameStates.playing;
+    }
+
+    IEnumerator HideMenuAnim(bool hide = true)
+    {
+        yield return UIAnimation.FadeButton(_button_play, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_title, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_quit, FadeType.Out, .2f);
+
+        if (hide)
+            _menu.SetActive(false);
+    }
+
+    IEnumerator DisplayMenuAnim()
+    {
+        _menu.SetActive(true);
+
+        yield return UIAnimation.FadeButton(_button_quit, FadeType.In, .2f);
+        yield return UIAnimation.Fade(_title, FadeType.In, .2f);
+        yield return UIAnimation.FadeButton(_button_play, FadeType.In, .2f);
+    }
+
+    IEnumerator DisplayOptionsAnim()
+    {
+        yield return HideMenuAnim(false);
+        _options.SetActive(true);
+        _button_return.Select();
         _menu.SetActive(false);
-        GameManager.inst.states = GameManager.GameStates.playing;
+        yield return UIAnimation.Fade(_options_text, FadeType.In, .2f);
+        yield return UIAnimation.FadeButton(_button_return, FadeType.In, .2f);
+        yield return UIAnimation.FadeGroup(_controlles, FadeType.In, .2f);
+    }
+
+    IEnumerator HideOptionsAnim()
+    {
+        yield return UIAnimation.Fade(_options_text, FadeType.Out, .2f);
+        yield return UIAnimation.FadeGroup(_controlles, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_return, FadeType.Out, .2f);
+
+        _menu.SetActive(true);
+        _button_play.Select();
+        _options.SetActive(false);
+        yield return DisplayMenuAnim();
     }
 
     public void Menu()
@@ -181,5 +243,15 @@ public class CanvasManager : MonoBehaviour {
             return;
 
         Application.Quit();
+    }
+
+    [SerializeField] private AudioMixer _audioMixerSFX = null, _audioMixerMusic;
+    public void SFXSetVolume(Slider slider)
+    {
+        _audioMixerSFX.SetFloat("Volume", slider.value <= 0 ? -80 : slider.value * 5f - 30f);
+    }
+    public void MusicSetVolume(Slider slider)
+    {
+        _audioMixerMusic.SetFloat("Volume", slider.value <= 0 ? -80 : slider.value * 5f - 30f);
     }
 }
