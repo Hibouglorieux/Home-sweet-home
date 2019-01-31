@@ -14,7 +14,7 @@ public class Sink : Interractable_item {
     {
         if (item_held == needed_item /*|| needed_item == Drag_item.none*/)
         {
-            Debug.Log("used"); //ok
+            //Debug.Log("used"); //ok
             // ajouter son
             if (timer_script && (timer_script.actual_timer -= timer_script.max_timer / duration_of_event) < 0)
             {
@@ -44,6 +44,8 @@ public class Sink : Interractable_item {
     {
         child_particle.SetActive(false);
         particles.Stop();
+
+        SucceedSound.Succeed();
 
         _source.Stop();
         Destroy(timer_script.gameObject);

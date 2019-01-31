@@ -48,6 +48,8 @@ public class GazCooker : Interractable_item
 
     public override void End_event()
     {
+        SucceedSound.Succeed();
+
         Debug.Log("gaz safe for now");
         Destroy(timer_script.gameObject);
         timer_script = null;

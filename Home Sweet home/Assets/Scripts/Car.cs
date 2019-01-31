@@ -43,6 +43,8 @@ public class Car : Interractable_item {
 
     public override void End_event()
     {
+        SucceedSound.Succeed();
+
         playing = false;
         Destroy(timer_script.gameObject);
         timer_script = null;

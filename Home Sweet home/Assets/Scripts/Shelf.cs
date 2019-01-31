@@ -32,12 +32,6 @@ public class Shelf : Interractable_item {
         return false;
     }
 
-    public override void End_event()
-    {
-        _anim.SetTrigger("fixed");
-        ini = false;
-    }
-
     public override void StartEvent()
     {
         timer_script = Instantiate(timer, new Vector3(transform.position.x, 4, transform.position.z), new Quaternion()).GetComponent<Timer>();
@@ -48,5 +42,13 @@ public class Shelf : Interractable_item {
 
         sound.Play();
         ini = true;
+    }
+
+    public override void End_event()
+    {
+        SucceedSound.Succeed();
+
+        _anim.SetTrigger("fixed");
+        ini = false;
     }
 }

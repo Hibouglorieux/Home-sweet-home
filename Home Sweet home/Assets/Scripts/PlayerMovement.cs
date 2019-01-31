@@ -11,9 +11,12 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody _rb;
 
+    AudioSource _source;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        _source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -44,5 +47,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _anim.SetFloat("Speed", new Vector2(_rb.velocity.x, _rb.velocity.z).sqrMagnitude);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        _source.Play();
     }
 }

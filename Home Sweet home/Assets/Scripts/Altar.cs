@@ -5,6 +5,7 @@ using UnityEngine;
 public class Altar : Interractable_item
 {
     AudioSource _source;
+    [SerializeField] AudioSource _music;
 
     [SerializeField] GameObject[] _candles;
     uint _candleLighted = 0;
@@ -41,9 +42,9 @@ public class Altar : Interractable_item
         timer_script.max_timer = duration_of_event;
         timer_script.parentType = (int)Item.Interract_item.cthulhu;
 
-
         _source.time = 0;
         _source.Play();
+        _music.Stop();
 
         _candleLighted = 0;
         for (int i = 0; i < _candles.Length; i++)
@@ -55,6 +56,9 @@ public class Altar : Interractable_item
     public override void End_event()
     {
         _source.Stop();
+        _music.Play();
+
+        SucceedSound.Succeed();
 
         Destroy(timer_script.gameObject);
         timer_script = null;

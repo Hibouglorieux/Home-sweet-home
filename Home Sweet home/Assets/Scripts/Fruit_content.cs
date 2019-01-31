@@ -15,5 +15,4 @@ public class Fruit_content : Interractable_item {
         timer_script.parentType = (int)Item.Interract_item.fruit;
         // gerer les particules (les mettre sur fruit_prefab a la palce ?)
     }
-
 }

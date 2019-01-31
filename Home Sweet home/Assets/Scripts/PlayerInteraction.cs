@@ -9,7 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] Transform _grabbedPosition;
     [SerializeField] Transform _grabCenter;
 
-    [SerializeField] Item_drag _draggedItem;
+    Item_drag _draggedItem;
     [SerializeField] LayerMask _grabLayer, _interactLayer;
 
     [SerializeField] float _grabRadius = 1;

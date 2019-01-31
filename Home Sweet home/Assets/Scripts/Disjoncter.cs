@@ -35,6 +35,8 @@ public class Disjoncter : Interractable_item
     public override void End_event()
     {
         _source.Stop();
+        SucceedSound.Succeed();
+
         _particle.Stop();
         Destroy(timer_script.gameObject);
         timer_script = null;
