@@ -46,6 +46,9 @@ public class CanvasManager : MonoBehaviour {
     bool end = false;
     bool _lanching = false;
 
+    float _time;
+    float _timeBeforeInteractAfterEnd = .6f;
+
     string[] deathReason = new string[] { "You've reached the end of your shelf life",
                                                            "It's not cool anymore",
                                                            "",
@@ -83,16 +86,17 @@ public class CanvasManager : MonoBehaviour {
 
     void Update()
     {
-        if (Input.anyKeyDown && GameManager.inst.states == GameManager.GameStates.end)
+        if (Input.anyKeyDown && GameManager.inst.states == GameManager.GameStates.end && _time < Time.unscaledTime)
         {
             Menu();
         }
 
-        if (Input.GetKeyDown("joystick button 7") || Input.GetKeyDown(KeyCode.Escape))
+        if ((Input.GetKeyDown("joystick button 7") || Input.GetKeyDown(KeyCode.Escape)))
         {
-            if (GameManager.inst.states != GameManager.GameStates.paused)
+            if (GameManager.inst.states == GameManager.GameStates.playing)
                 Pause();
-            else Unpause();
+            else if (GameManager.inst.states == GameManager.GameStates.paused)
+                Unpause();
         }
     }
 
@@ -106,6 +110,9 @@ public class CanvasManager : MonoBehaviour {
     {
         if (end)
             return;
+
+        _time = Time.unscaledTime + _timeBeforeInteractAfterEnd;
+
         end = true;
         _desc.text = Get_dialog(deathDesc);
         GameManager.inst.states = GameManager.GameStates.end;
@@ -115,6 +122,9 @@ public class CanvasManager : MonoBehaviour {
     {
         if (end)
             return;
+
+        _time = Time.unscaledTime + _timeBeforeInteractAfterEnd;
+
         end = true;
         _die.text = "Home sweet home";
         _desc.text = "You succeed to keep it sweet";
