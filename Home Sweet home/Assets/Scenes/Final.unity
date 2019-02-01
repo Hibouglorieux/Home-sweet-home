@@ -499,7 +499,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 114fc0f35d3320c4fb7cb2e94b672dfd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1307,7 +1307,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aa89c03397db98b43aaaa6c49703e4af, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5098,6 +5098,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1563690727, guid: 96af7b5c05ea4824dbf4504531ba339f, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96af7b5c05ea4824dbf4504531ba339f, type: 3}
 --- !u!1001 &1063913725
@@ -8823,24 +8827,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3052276290424865531, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
+    - target: {fileID: 1639773630314922, guid: 86ed383c45d4b7f49a2a2c461e0c7355, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3052276290424865531, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089987050577427071, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4089987050577427071, guid: 86ed383c45d4b7f49a2a2c461e0c7355,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
+    - target: {fileID: 1695363600395640, guid: 86ed383c45d4b7f49a2a2c461e0c7355, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

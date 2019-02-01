@@ -30,12 +30,17 @@ public class CanvasManager : MonoBehaviour {
     [SerializeField] TextMeshProUGUI _options_text;
     [SerializeField] Button _button_return;
     [SerializeField] Graphic[] _controlles;
+    [SerializeField] Graphic[] _sliderMusic;
+    [SerializeField] Graphic[] _sliderSFX;
 
     [Space(10)]
     [Header("Menu")]
     [SerializeField] GameObject _menu;
     [SerializeField] TextMeshProUGUI _title;
     [SerializeField] Button _button_play, _button_options, _button_quit;
+    [SerializeField] Image _ggjLogo;
+    [SerializeField] Graphic[] _names;
+
     float remainingTime;
 
     bool end = false;
@@ -69,8 +74,11 @@ public class CanvasManager : MonoBehaviour {
         _fade_front.gameObject.SetActive(true);
         _fade_back.gameObject.SetActive(true);
         _menu.SetActive(true);
+
         yield return UIAnimation.Fade(_fade_front, FadeType.Out, .4f);
         _fade_front.gameObject.SetActive(false);
+
+        
     }
 
     void Update()
@@ -191,9 +199,12 @@ public class CanvasManager : MonoBehaviour {
 
     IEnumerator HideMenuAnim(bool hide = true)
     {
-        yield return UIAnimation.FadeButton(_button_play, FadeType.Out, .2f);
-        yield return UIAnimation.Fade(_title, FadeType.Out, .2f);
         yield return UIAnimation.FadeButton(_button_quit, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_options, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_play, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_ggjLogo, FadeType.Out, .2f);
+        yield return UIAnimation.FadeGroup(_names, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_title, FadeType.Out, .2f);
 
         if (hide)
             _menu.SetActive(false);
@@ -204,25 +215,39 @@ public class CanvasManager : MonoBehaviour {
         _menu.SetActive(true);
 
         yield return UIAnimation.FadeButton(_button_quit, FadeType.In, .2f);
-        yield return UIAnimation.Fade(_title, FadeType.In, .2f);
+        yield return UIAnimation.FadeButton(_button_options, FadeType.In, .2f);
         yield return UIAnimation.FadeButton(_button_play, FadeType.In, .2f);
+        yield return UIAnimation.Fade(_ggjLogo, FadeType.In, .2f);
+        yield return UIAnimation.FadeGroup(_names, FadeType.In, .2f);
+        yield return UIAnimation.Fade(_title, FadeType.In, .2f);
     }
 
     IEnumerator DisplayOptionsAnim()
     {
-        yield return HideMenuAnim(false);
+        yield return UIAnimation.FadeButton(_button_quit, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_play, FadeType.Out, .2f);
+        yield return UIAnimation.FadeButton(_button_options, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_ggjLogo, FadeType.Out, .2f);
+        yield return UIAnimation.FadeGroup(_names, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_title, FadeType.Out, .2f);
+
         _options.SetActive(true);
         _button_return.Select();
         _menu.SetActive(false);
+
+        yield return UIAnimation.FadeGroup(_controlles, FadeType.In, .2f);
+        yield return UIAnimation.FadeGroup(_sliderMusic, FadeType.In, .2f);
+        yield return UIAnimation.FadeGroup(_sliderSFX, FadeType.In, .2f);
         yield return UIAnimation.Fade(_options_text, FadeType.In, .2f);
         yield return UIAnimation.FadeButton(_button_return, FadeType.In, .2f);
-        yield return UIAnimation.FadeGroup(_controlles, FadeType.In, .2f);
     }
 
     IEnumerator HideOptionsAnim()
     {
-        yield return UIAnimation.Fade(_options_text, FadeType.Out, .2f);
         yield return UIAnimation.FadeGroup(_controlles, FadeType.Out, .2f);
+        yield return UIAnimation.FadeGroup(_sliderMusic, FadeType.Out, .2f);
+        yield return UIAnimation.FadeGroup(_sliderSFX, FadeType.Out, .2f);
+        yield return UIAnimation.Fade(_options_text, FadeType.Out, .2f);
         yield return UIAnimation.FadeButton(_button_return, FadeType.Out, .2f);
 
         _menu.SetActive(true);

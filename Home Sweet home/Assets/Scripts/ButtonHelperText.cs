@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
@@ -38,7 +39,10 @@ public class ButtonHelperText : ButtonHelper, IDeselectHandler
         if (_text == null)
             _text = GetComponentInChildren<TextMeshProUGUI>();
 
-        _text.color = _selectable.colors.highlightedColor;
+        Color color = _selectable.colors.highlightedColor;
+        color.a = _text.color.a;
+
+        _text.color = color;
     }
 
     protected void UnSelectText()
@@ -48,6 +52,9 @@ public class ButtonHelperText : ButtonHelper, IDeselectHandler
         if (_text == null)
             _text = GetComponentInChildren<TextMeshProUGUI>();
 
-        _text.color = _selectable.colors.normalColor;
+        Color color = _selectable.colors.normalColor;
+        color.a = _text.color.a;
+
+        _text.color = color;
     }
 }
