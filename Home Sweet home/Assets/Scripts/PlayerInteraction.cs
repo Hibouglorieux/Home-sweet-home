@@ -30,7 +30,7 @@ public class PlayerInteraction : MonoBehaviour
         if (GameManager.inst.states != GameManager.GameStates.playing)
             return;
 
-        if (Input.GetKeyDown("joystick button 0"))
+        if (Input.GetKeyDown("joystick button 0") || Input.GetKeyDown(KeyCode.O))
         {
             /*bool grabNow = false;
             if (_draggedItem == null)
@@ -43,13 +43,13 @@ public class PlayerInteraction : MonoBehaviour
                 _draggedItem.Activate();
             else TryInteract();
         }
-        else if (Input.GetKeyUp("joystick button 0"))
+        else if (Input.GetKeyUp("joystick button 0") || Input.GetKeyUp(KeyCode.O))
         {
             if (_draggedItem != null)
                 _draggedItem.Desactivate();
             else TryGrab();
         }
-        else if (Input.GetKeyDown("joystick button 1") && _draggedItem != null)
+        else if ((Input.GetKeyDown("joystick button 1") || Input.GetKeyDown(KeyCode.P)) && _draggedItem != null)
             Drop();
 
         if (_draggedItem != null)

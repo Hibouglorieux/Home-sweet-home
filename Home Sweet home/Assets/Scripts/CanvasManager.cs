@@ -88,7 +88,7 @@ public class CanvasManager : MonoBehaviour {
             Menu();
         }
 
-        if (Input.GetKeyDown("joystick button 7"))
+        if (Input.GetKeyDown("joystick button 7") || Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameManager.inst.states != GameManager.GameStates.paused)
                 Pause();
