@@ -14,9 +14,15 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] float _grabRadius = 1;
 
+    Animator _anim;
+
+    [SerializeField] AudioClip[] _dragDrop;
+    [SerializeField] AudioSource _source;
+
     private void Awake()
     {
         inst = this;
+        _anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -57,6 +63,10 @@ public class PlayerInteraction : MonoBehaviour
 
         _draggedItem = cols[0].GetComponentInParent<Item_drag>();
         _draggedItem.Drag(_grabbedPosition, Vector3.zero);
+        _anim.SetTrigger("Grab");
+
+        _source.clip = _dragDrop[0];
+        _source.Play();
 
         return true;
     }
@@ -76,14 +86,20 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Drop()
     {
+        _source.clip = _dragDrop[1];
+        _source.Play();
+
         _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
         _draggedItem = null;
+
+        _anim.SetTrigger("Drop");
     }
 
     public void Detroy_held_obj()
     {
-        _draggedItem.Drop(GetComponent<Rigidbody>().velocity);
         Destroy(_draggedItem.gameObject);
         _draggedItem = null;
+
+        _anim.SetTrigger("Drop");
     }
 }

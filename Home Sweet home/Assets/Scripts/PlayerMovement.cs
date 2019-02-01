@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody _rb;
 
-    AudioSource _source;
+    [SerializeField] AudioSource _source;
 
     void Start()
     {
